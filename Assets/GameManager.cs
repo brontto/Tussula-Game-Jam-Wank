@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
+	public AudioManager audioManager;
+
 	public Text ranking;
 	public Text winText;
 
@@ -79,6 +81,11 @@ public class GameManager : MonoBehaviour {
 		winText.text = name + " WINS !!";
 
 		yield return new WaitForSeconds (2f);
+
+		//anthermemmadsf
+		int anthem = playerGameobjects [finishedPlayers [0]].GetComponentInChildren<CharacterData> ().anthem;
+
+		audioManager.PlayAnthem (anthem);
 	}
 	                           
 
