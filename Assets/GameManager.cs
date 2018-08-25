@@ -6,6 +6,10 @@ public class GameManager : MonoBehaviour {
 
 	public List<Player> players = new List<Player>();
 
+	public void AddPlayer(Player player) {
+		players.Add (player);
+	}
+
 	// Use this for initialization
 	void Start () {
 		CreatePlayers ();
