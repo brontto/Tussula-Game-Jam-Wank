@@ -49,20 +49,29 @@ public class PlsyerController : MonoBehaviour {
 
 	void FollowBezier() {
 
-		position += velocity / (gman.trackLength * 20);
+		position += velocity / (gman.trackLength * 40);
 
 		if (position > 1) {
+			playerFinished();
 			position -= 1;
 		}
 
-		t.position = gman.GetBezierPoint (position);
+		t.position = gman.GetBezierPointOnLane (position, (float)playerInfo.getIndex());
+
+		//look to future location to rotate mounts properly
+		t.LookAt(gman.GetBezierPointOnLane (position + 0.01f, (float)playerInfo.getIndex()));
 		
+	}
+
+	private void playerFinished() {
+		gman.FinishPlayer (playerInfo.getIndex ());
+
 	}
 
 	private float calculateDistortion () {
 
-		Vector3 currentPosition =  gman.GetBezierPoint(position);
-		Vector3 nextPosition = gman.GetBezierPoint(position + 0.01f);
+		Vector3 currentPosition =  gman.GetBezierPointOnLane (position, (float)playerInfo.getIndex());
+		Vector3 nextPosition = gman.GetBezierPointOnLane (position + 0.01f, (float)playerInfo.getIndex());
 	
 		return 0;
 	}
