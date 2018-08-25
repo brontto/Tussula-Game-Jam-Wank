@@ -12,7 +12,8 @@ public class PlsyerController : MonoBehaviour {
 		set {
 			playerInfo = value;
 			leftKey = playerInfo.getLeftKey();
-			rightKey = playerInfo.getRightKey();			
+			rightKey = playerInfo.getRightKey();	
+			mountInfo = playerInfo.GetMount().GetComponent<MountData>();
 		}
 	}
 
@@ -23,16 +24,23 @@ public class PlsyerController : MonoBehaviour {
 	private int currentDirection = 0;
 	private float velocity = 0f;
 
+	private MountData mountInfo;
+
+	private Transform t;
+
 	// Use this for initialization
 	void Start () {
 		currentDirection = 0;
+		t = this.transform;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 		HandleControls ();
-		
+
+		velocity *= 1 - mountInfo.drag;
+		t.Translate (Vector3.forward * velocity / 100f);
 	}
 
 	void HandleControls() {
@@ -53,10 +61,14 @@ public class PlsyerController : MonoBehaviour {
 		
 		if (pressedButton) {
 			
-			if (currentDirection != previousDirection) {
+			if (currentDirection == previousDirection) {
 				
-			//	velocity = Mathf.Max(velocity - 
+				velocity = Mathf.Max(velocity - mountInfo.decelerationFromFailures,0);
 				
+			} else {
+
+				velocity += mountInfo.acceleration;
+
 			}
 			
 		}

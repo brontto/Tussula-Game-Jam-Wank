@@ -41,4 +41,8 @@ public class Player
 		rightKey = key;
 		Debug.Log("Right key: " + rightKey);
 	}
+
+	public GameObject GetMount() {
+		return mount;
+	}
 }

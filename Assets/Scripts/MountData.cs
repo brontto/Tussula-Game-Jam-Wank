@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MountData {
+public class MountData: MonoBehaviour {
 
 	public float acceleration = 1f;
 	public float drag = 0.1f;
