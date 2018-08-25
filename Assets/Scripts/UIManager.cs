@@ -29,7 +29,8 @@ public class UIManager : MonoBehaviour
 			case "buttonSelect":
 				if (!buttonSelectActive)
 				{
-					StartCoroutine(selectButtons());
+					buttonSelectActive = true;
+					StartCoroutine(setButtons());
 				}
 				break;
 		}
@@ -55,30 +56,54 @@ public class UIManager : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Return))
 		{
 			players = new Player[playerCount];
+			keysInUse = new KeyCode[playerCount];
 			uiSequence = "buttonSelect";
 		}
 	}
 
-	IEnumerator selectButtons()
+	IEnumerator setButtons()
 	{
-		buttonSelectActive = true;
-
+	
 		for (int i = 0; i < playerCount; i++)
 		{
 			players[i] = new Player(i);
+
 			while (true)
 			{
-				for (int k = 0; k < keyBoard.Length; k++)
+				foreach(var item in keyBoard)
 				{
-					if (Input.GetKeyDown(keyBoard[k]))
+					if (Input.GetKeyDown(item) && players[i].getLeftKey() == KeyCode.None && checkIfUsed(keysInUse, item) == false)
 					{
-						Debug.Log(keyBoard[k]);
-						break;
+						players[i].setLeftKey(item);
+						keysInUse[i] = item;
+					}
+					else if (Input.GetKeyDown(item) && players[i].getRightKey() == KeyCode.None && item != players[i].getLeftKey() && checkIfUsed(keysInUse, item) == false)
+					{
+						players[i].setRightKey(item);
+						keysInUse[i] = item;
 					}
 				}
-			yield return null;
+
+				if (players[i].getLeftKey() != KeyCode.None && players[i].getRightKey() != KeyCode.None)
+				{
+
+					break;
+				}
+				
+				yield return null;
 			}
-			
+			Debug.Log(players[i].getKeyDetails());
 		}
+	}
+	bool checkIfUsed(KeyCode[] items, KeyCode i)
+	{
+		foreach (var item in items)
+		{
+			if (item == i)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 }

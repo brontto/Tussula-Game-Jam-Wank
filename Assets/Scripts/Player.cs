@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player
 {
 	private int playerIndex;
-	private KeyCode leftKey, rightKey;
+	private KeyCode leftKey = KeyCode.None, rightKey = KeyCode.None;
 	private GameObject character, mount;
 
 	public Player(int index)
@@ -29,15 +29,18 @@ public class Player
 		return rightKey;
 	}
 
+	public string getKeyDetails()
+	{
+		return "Index: " + playerIndex + ". LeftKey: " + leftKey + ". RightKey " + rightKey;
+	}
+
 	public void setLeftKey(KeyCode key)
 	{
 		leftKey = key;
-		Debug.Log("Left key: " + leftKey);
 	}
 
 	public void setRightKey(KeyCode key)
 	{
 		rightKey = key;
-		Debug.Log("Right key: " + rightKey);
 	}
 }
