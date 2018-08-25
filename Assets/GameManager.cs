@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
+
+	public Text ranking;
+	public Text winText;
 
 	public Track[] tracks;
 
@@ -10,15 +14,14 @@ public class GameManager : MonoBehaviour {
 
 	private List<int> finishedPlayers = new List<int> ();
 
-	public GameObject trackOuter;
-	public GameObject trackInner;
-
 	private BezierCurve bezierOuter;
 	private BezierCurve bezierInner;
 
 	private GameObject track;
 	private GameObject trackBezierOuter;
 	private GameObject trackBezierInner;
+
+	private List<GameObject> playerGameobjects = new List<GameObject> ();
 
 	[HideInInspector] public float trackLength;
 
@@ -42,6 +45,10 @@ public class GameManager : MonoBehaviour {
 
 	}
 
+	//void Update() {
+
+	//}
+
 	public void Init() {
 
 		ResetRace ();
@@ -52,6 +59,8 @@ public class GameManager : MonoBehaviour {
 
 	public void ResetRace() {
 		finishedPlayers.Clear ();
+		playerGameobjects.Clear ();
+		winText.gameObject.SetActive (false);
 
 	}
 
@@ -59,12 +68,17 @@ public class GameManager : MonoBehaviour {
 		finishedPlayers.Add (playerIndex);
 
 		if (finishedPlayers.Count >= players.Count) {
-			FinishRace();
+			StartCoroutine(FinishRace());
 		}
 	}
 
-	private void FinishRace() {
+	private IEnumerator FinishRace() {
+		string name = playerGameobjects[ finishedPlayers[0]].GetComponent<MountData>().name;
 
+		winText.gameObject.SetActive (true);
+		winText.text = name + " WINS !!";
+
+		yield return new WaitForSeconds (2f);
 	}
 	                           
 
@@ -105,10 +119,12 @@ public class GameManager : MonoBehaviour {
 
 		foreach (Player player in players) {
 
-			GameObject mount = (GameObject)Instantiate(player.GetMount(), Vector3.zero, Quaternion.identity);
+			GameObject playerModel = (GameObject)Instantiate(player.GetMount(), Vector3.zero, Quaternion.identity);
 
-			PlsyerController controller = mount.AddComponent<PlsyerController>();
+			PlsyerController controller = playerModel.AddComponent<PlsyerController>();
 			controller.PlayerInfo = player;
+
+			playerGameobjects.Add(playerModel);
 
 		}
 

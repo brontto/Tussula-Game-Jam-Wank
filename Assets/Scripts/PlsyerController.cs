@@ -32,6 +32,8 @@ public class PlsyerController : MonoBehaviour {
 
 	private GameManager gman;
 
+	private bool isFinished = false;
+
 	// Use this for initialization
 	void Start () {
 		gman = GameManager.instance;
@@ -51,20 +53,21 @@ public class PlsyerController : MonoBehaviour {
 
 		position += velocity / (gman.trackLength * 40);
 
-		if (position > 1) {
-			playerFinished();
-			position -= 1;
-		}
-
 		t.position = gman.GetBezierPointOnLane (position, (float)playerInfo.getIndex());
 
 		//look to future location to rotate mounts properly
 		t.LookAt(gman.GetBezierPointOnLane (position + 0.01f, (float)playerInfo.getIndex()));
+
+		if (position > 1 && !isFinished) {
+			playerFinished();
+			position -= 1;
+		}
 		
 	}
 
 	private void playerFinished() {
 		gman.FinishPlayer (playerInfo.getIndex ());
+		isFinished = true;
 
 	}
 
@@ -78,6 +81,10 @@ public class PlsyerController : MonoBehaviour {
 
 
 	void HandleControls() {
+
+		if (isFinished) {
+			return;
+		}
 
 		previousDirection = currentDirection;
 		
