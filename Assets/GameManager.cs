@@ -86,6 +86,10 @@ public class GameManager : MonoBehaviour {
 		int anthem = playerGameobjects [finishedPlayers [0]].GetComponentInChildren<CharacterData> ().anthem;
 
 		audioManager.PlayAnthem (anthem);
+
+		yield return new WaitForSeconds (15f);
+		//start new match
+		Init ();
 	}
 	                           
 
