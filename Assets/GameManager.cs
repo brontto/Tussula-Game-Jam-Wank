@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Cinemachine;
+using static Cinemachine.CinemachineTargetGroup;
 
 public class GameManager : MonoBehaviour {
 
@@ -128,6 +130,8 @@ public class GameManager : MonoBehaviour {
 
 	void CreatePlayers() {
 
+		GameObject cine = GameObject.Find ("TargetGroup1");
+
 		foreach (Player player in players) {
 
 			GameObject mountModel = (GameObject)Instantiate(player.GetMount(), Vector3.zero, Quaternion.identity);
@@ -145,8 +149,10 @@ public class GameManager : MonoBehaviour {
 
 			playerGameobjects.Add(mountModel);
 
+			cine.GetComponent<TargetGroupHandler>().AddToList(mountModel);
 
 		}
+
 
 	}
 
