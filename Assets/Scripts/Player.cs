@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Player
 {
-	private int playerIndex;
-	private KeyCode leftKey = KeyCode.None, rightKey = KeyCode.None;
-	private GameObject character, mount;
+	[SerializeField] private int playerIndex;
+	[SerializeField] private KeyCode leftKey = KeyCode.None, rightKey = KeyCode.None;
+	[SerializeField] private GameObject character, mount;
 
 	public Player(int index)
 	{
@@ -43,4 +44,9 @@ public class Player
 	{
 		rightKey = key;
 	}
+
+	public GameObject GetMount() {
+		return mount;
+	}
+
 }

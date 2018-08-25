@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour {
 
 	public GameObject track;
 
-	private BezierCurve bezier;
+	private BezierCurve bezierOuter;
+	private BezierCurve bezierInner;
 
 
 	[HideInInspector] public float trackLength;
@@ -25,9 +26,9 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		bezier = track.GetComponent<BezierCurve> ();
+		bezierOuter = track.GetComponent<BezierCurve> ();
 		
-		trackLength = bezier.length;
+		trackLength = bezierOuter.length;
 		Debug.Log (trackLength);
 
 		CreatePlayers ();
@@ -35,8 +36,21 @@ public class GameManager : MonoBehaviour {
 
 	public Vector3 GetBezierPoint(float value) {
 		value = Mathf.Lerp (0, 1, value);
-		return bezier.GetPointAt (value);
+		return bezierOuter.GetPointAt (value);
 
+	}
+
+	public Vector3 GetBezierPointOnLane(float value, int playerIndex = 0) {
+		value = Mathf.Lerp (0, 1, value);
+
+		Vector3 outerPoint = bezierOuter.GetPointAt (value);
+		Vector3 innerPoint = bezierInner.GetPointAt (value);
+
+		Vector3 distance = outerPoint - innerPoint;
+
+		distance = distance / players.Count * playerIndex;
+
+		return Vector3.zero;
 	}
 
 	void CreatePlayers() {
