@@ -126,6 +126,7 @@ public class GameManager : MonoBehaviour {
 
 			playerGameobjects.Add(playerModel);
 
+
 		}
 
 	}

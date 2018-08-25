@@ -442,6 +442,16 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114684853878724322, guid: 47929da59c9babc459d9c499168e4b39,
+        type: 2}
+      propertyPath: winText
+      value: 
+      objectReference: {fileID: 199718470}
+    - target: {fileID: 114684853878724322, guid: 47929da59c9babc459d9c499168e4b39,
+        type: 2}
+      propertyPath: ranking
+      value: 
+      objectReference: {fileID: 700395646}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47929da59c9babc459d9c499168e4b39, type: 2}
   m_IsPrefabAsset: 0
@@ -639,6 +649,12 @@ Transform:
   m_Father: {fileID: 2121689053}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &700395646 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114350976171586350, guid: 47929da59c9babc459d9c499168e4b39,
+    type: 2}
+  m_PrefabInternal: {fileID: 382553752}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &789708232
 GameObject:
   m_ObjectHideFlags: 0

@@ -51,6 +51,9 @@ public class PlsyerController : MonoBehaviour {
 
 	void FollowBezier() {
 
+		//lowly slowdown all the time
+		velocity *= 1 - mountInfo.drag;
+
 		position += velocity / (gman.trackLength * 40);
 
 		t.position = gman.GetBezierPointOnLane (position, (float)playerInfo.getIndex());
@@ -78,6 +81,11 @@ public class PlsyerController : MonoBehaviour {
 	
 		return 0;
 	}
+
+	public float getPosition() {
+		return position;
+	}
+
 
 
 	void HandleControls() {
@@ -114,7 +122,7 @@ public class PlsyerController : MonoBehaviour {
 			
 		}
 
-		velocity *= 1 - mountInfo.drag;
+
 
 	}
 
