@@ -28,8 +28,13 @@ public class PlsyerController : MonoBehaviour {
 
 	private Transform t;
 
+	private float position = 0;
+
+	private GameManager gman;
+
 	// Use this for initialization
 	void Start () {
+		gman = GameManager.instance;
 		currentDirection = 0;
 		t = this.transform;
 	}
@@ -39,9 +44,29 @@ public class PlsyerController : MonoBehaviour {
 
 		HandleControls ();
 
-		velocity *= 1 - mountInfo.drag;
-		t.Translate (Vector3.forward * velocity / 100f);
+		FollowBezier ();
 	}
+
+	void FollowBezier() {
+
+		position += velocity / (gman.trackLength * 20);
+
+		if (position > 1) {
+			position -= 1;
+		}
+
+		t.position = gman.GetBezierPoint (position);
+		
+	}
+
+	private float calculateDistortion () {
+
+		Vector3 currentPosition =  gman.GetBezierPoint(position);
+		Vector3 nextPosition = gman.GetBezierPoint(position + 0.01f);
+	
+		return 0;
+	}
+
 
 	void HandleControls() {
 
@@ -72,6 +97,8 @@ public class PlsyerController : MonoBehaviour {
 			}
 			
 		}
+
+		velocity *= 1 - mountInfo.drag;
 
 	}
 
