@@ -127,7 +127,10 @@ public class GameManager : MonoBehaviour {
 			GameObject riderModel = (GameObject)Instantiate(player.GetRider(), Vector3.zero, Quaternion.identity);
 			riderModel.transform.parent = mountModel.transform;
 
-			riderModel.AddComponent<FixedJoint>().connectedBody = mountModel.GetComponent<Rigidbody>();
+			SpringJoint spring = riderModel.AddComponent<SpringJoint>();
+			spring.connectedBody = mountModel.GetComponent<Rigidbody>();
+
+			spring.spring = 1222f;
 
 			playerGameobjects.Add(mountModel);
 
