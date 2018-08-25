@@ -119,12 +119,17 @@ public class GameManager : MonoBehaviour {
 
 		foreach (Player player in players) {
 
-			GameObject playerModel = (GameObject)Instantiate(player.GetMount(), Vector3.zero, Quaternion.identity);
+			GameObject mountModel = (GameObject)Instantiate(player.GetMount(), Vector3.zero, Quaternion.identity);
 
-			PlsyerController controller = playerModel.AddComponent<PlsyerController>();
+			PlsyerController controller = mountModel.AddComponent<PlsyerController>();
 			controller.PlayerInfo = player;
 
-			playerGameobjects.Add(playerModel);
+			GameObject riderModel = (GameObject)Instantiate(player.GetRider(), Vector3.zero, Quaternion.identity);
+			riderModel.transform.parent = mountModel.transform;
+
+			riderModel.AddComponent<FixedJoint>().connectedBody = mountModel.GetComponent<Rigidbody>();
+
+			playerGameobjects.Add(mountModel);
 
 
 		}

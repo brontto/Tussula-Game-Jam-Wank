@@ -49,4 +49,8 @@ public class Player
 		return mount;
 	}
 
+	public GameObject GetRider() {
+		return character;
+	}
+
 }
