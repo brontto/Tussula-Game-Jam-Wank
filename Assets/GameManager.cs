@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour {
 
 		//teleport announcer to next to track
 		announcer.transform.position = GetBezierPointOnLane (0, -players.Count /2);
-		announcer.transform.Translate (Vector3.up * 2);
+	//	announcer.transform.Translate (Vector3.up * 2);
 
 		announcerAnimator.SetBool ("start", true);
 
@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour {
 		Vector3 left = GetBezierPointOnLane (0, 0);
 		Vector3 right = GetBezierPointOnLane (0.5f, 0);		
 		announcer.transform.position = (left + right) / 2;
-		announcer.transform.Translate (Vector3.up * 7);
+		announcer.transform.Translate (Vector3.up * 4);
 		
 	}
 
