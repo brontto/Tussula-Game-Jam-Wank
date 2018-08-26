@@ -7,6 +7,8 @@ using Cinemachine;
 
 public class GameManager : MonoBehaviour {
 
+	public bool skipUI = false;
+
 	public GameObject winParticles;
 
 	public GameObject[] fireWorks;
@@ -56,6 +58,12 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	//	Init ();
+
+		if (skipUI) {
+			Destroy(GameObject.Find("UI") );
+			Init();
+			
+		}
 
 	}
 
@@ -178,7 +186,7 @@ public class GameManager : MonoBehaviour {
 		trackBezierOuter.transform.parent = trackGameObject.transform;
 		trackBezierInner.transform.parent = trackGameObject.transform;
 
-		trackGameObject.AddComponent<rotator> ();
+	//	trackGameObject.AddComponent<rotator> ();
 
 		bezierOuter = trackBezierOuter.GetComponent<BezierCurve> ();
 		bezierInner = trackBezierInner.GetComponent<BezierCurve> ();		
@@ -233,6 +241,7 @@ public class GameManager : MonoBehaviour {
 
 			//mount
 			GameObject mountModel = (GameObject)Instantiate(player.GetMount(), Vector3.zero, Quaternion.identity);
+			mountModel.transform.localScale = new Vector3(0.66f, 0.66f, 0.66f);
 
 			PlsyerController controller = mountModel.AddComponent<PlsyerController>();
 			controller.PlayerInfo = player;
@@ -251,6 +260,7 @@ public class GameManager : MonoBehaviour {
 
 			controller.mountAss = mountPelvis;
 			controller.riderPelvis = riderPelvis;
+			controller.mountAnimator = mountModel.GetComponent<Animator>();
 
 			//dont put this to parent until recursive searches are done
 			riderModel.transform.parent = mountModel.transform;

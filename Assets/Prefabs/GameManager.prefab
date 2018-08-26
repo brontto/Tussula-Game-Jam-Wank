@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71b20e048cb39ac4fb324265e65c04b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skipUI: 1
   winParticles: {fileID: 1209303793227558, guid: c96c87ab69cc5c345a6f2b972c07d58a,
     type: 2}
   fireWorks:
@@ -268,7 +269,7 @@ MonoBehaviour:
     rightKey: 275
     character: {fileID: 1698518582249302, guid: 56318e30345e8094ca83a77f98651c63,
       type: 2}
-    mount: {fileID: 1426406780185096, guid: ef32dee3bb6b40e4191ead59746d22b5, type: 2}
+    mount: {fileID: 1001010526084958, guid: ef32dee3bb6b40e4191ead59746d22b5, type: 2}
   - playerIndex: 1
     leftKey: 97
     rightKey: 100
