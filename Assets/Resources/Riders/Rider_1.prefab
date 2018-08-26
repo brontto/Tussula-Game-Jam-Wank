@@ -1019,6 +1019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anthem: 0
+  name: toad dude
 --- !u!135 &135118015255475288
 SphereCollider:
   m_ObjectHideFlags: 1
