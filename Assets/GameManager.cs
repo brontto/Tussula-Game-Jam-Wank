@@ -9,6 +9,10 @@ public class GameManager : MonoBehaviour {
 
 	public bool skipUI = false;
 
+	public GameObject announcer;
+	private Animator announcerAnimator;
+
+
 	public GameObject winParticles;
 
 	public GameObject[] fireWorks;
@@ -53,6 +57,8 @@ public class GameManager : MonoBehaviour {
 
 	void Awake() {
 		instance = this;
+
+		announcerAnimator = announcer.GetComponentInChildren<Animator> ();
 	}
 
 	// Use this for initialization
@@ -85,6 +91,11 @@ public class GameManager : MonoBehaviour {
 
 		ResetRace ();
 		CreateTrack ();
+
+		//teleport announcer to next to track
+		announcer.transform.position = GetBezierPointOnLane (0, -players.Count /2);
+		announcer.transform.Translate (Vector3.up * 2);
+
 		CreatePlayers ();
 
 		StartCoroutine (StartWanking ());
@@ -101,6 +112,14 @@ public class GameManager : MonoBehaviour {
 
 		raceStarted = true;
 
+		yield return new WaitForSeconds (1f);
+
+		//teleport announcer in the middle of track
+		Vector3 left = GetBezierPointOnLane (0, 0);
+		Vector3 right = GetBezierPointOnLane (0.5f, 0);		
+		announcer.transform.position = (left + right) / 2;
+		announcer.transform.Translate (Vector3.up * 15);
+		
 	}
 
 	public void ResetRace() {
@@ -196,6 +215,10 @@ public class GameManager : MonoBehaviour {
 		bezierInner = trackBezierInner.GetComponent<BezierCurve> ();		
 
 		trackLength = bezierOuter.length;
+
+
+
+
 
 	}
 
