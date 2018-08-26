@@ -306,6 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4233047985595358}
   - component: {fileID: 95333529747487272}
+  - component: {fileID: 114401307962527190}
   m_Layer: 0
   m_Name: Mount_5
   m_TagString: Untagged
@@ -668,6 +669,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114401307962527190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821371712555948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e7213f5b0b05d42a7a5cef550e3b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Crystal Weasel
+  acceleration: 0.25
+  drag: 0.015
+  decelerationFromFailures: 1
 --- !u!137 &137274709208886886
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
