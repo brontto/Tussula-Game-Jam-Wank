@@ -53,4 +53,12 @@ public class Player
 		return character;
 	}
 
+    public void SetMount(GameObject gameObject) {
+        mount = gameObject;
+    }
+
+    public void SetRider(GameObject gameObject) {
+        character = gameObject;
+    }
+
 }
