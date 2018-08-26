@@ -56,12 +56,6 @@ public class PlsyerController : MonoBehaviour {
 
 		FollowBezier ();
 
-		if (!gman.raceStarted) {
-			return;
-		}
-
-		HandleControls ();
-			
 		if (velocity > 0.33f) {
 			mountAnimator.SetBool("run", true);
 			mountAnimator.SetFloat("RideSpeed", velocity * 20f);
@@ -69,6 +63,14 @@ public class PlsyerController : MonoBehaviour {
 			mountAnimator.SetBool("run", false);
 			mountAnimator.SetFloat("RideSpeed", 1f);
 		}
+		
+		if (!gman.raceStarted) {
+			return;
+		}
+
+		HandleControls ();
+			
+
 
 	}
 
