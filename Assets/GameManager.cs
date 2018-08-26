@@ -260,6 +260,7 @@ public class GameManager : MonoBehaviour {
 
 			controller.mountAss = mountPelvis;
 			controller.riderPelvis = riderPelvis;
+			controller.mountAnimator = mountModel.GetComponent<Animator>();
 
 			//dont put this to parent until recursive searches are done
 			riderModel.transform.parent = mountModel.transform;

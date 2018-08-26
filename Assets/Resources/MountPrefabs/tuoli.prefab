@@ -827,8 +827,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: palikka
-  acceleration: 1
-  drag: 0.015
+  acceleration: 0.1
+  drag: 0.025
   decelerationFromFailures: 2
 --- !u!137 &137209705386316650
 SkinnedMeshRenderer:

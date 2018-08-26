@@ -42,6 +42,7 @@ public class PlsyerController : MonoBehaviour {
 	public GameObject rider;
 	public GameObject riderPelvis;
 	public GameObject mountAss;
+	public Animator mountAnimator;
 
 	// Use this for initialization
 	void Start () {
@@ -61,6 +62,14 @@ public class PlsyerController : MonoBehaviour {
 
 		HandleControls ();
 			
+		if (velocity > 0.33f) {
+			mountAnimator.SetBool("run", true);
+			mountAnimator.SetFloat("RideSpeed", velocity * 20f);
+		} else {
+			mountAnimator.SetBool("run", false);
+			mountAnimator.SetFloat("RideSpeed", 1f);
+		}
+
 	}
 
 	void FollowBezier() {
