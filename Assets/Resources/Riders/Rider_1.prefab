@@ -1018,7 +1018,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0af8be771d51742ab27d7a39d2a3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anthem: 0
+  anthem: 1
+  name: Toad Dude
 --- !u!135 &135118015255475288
 SphereCollider:
   m_ObjectHideFlags: 1

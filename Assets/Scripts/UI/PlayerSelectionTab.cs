@@ -19,6 +19,9 @@ public class PlayerSelectionTab : MonoBehaviour {
     [SerializeField] private Text rightKeyText;
     [SerializeField] private Text leftKeyText;
 
+	[SerializeField] private Text riderName;
+	[SerializeField] private Text mountName;
+
 
     [SerializeField] private SkinnedMeshRenderer rightPreview;
 	[SerializeField] private SkinnedMeshRenderer leftPreview;
@@ -63,6 +66,7 @@ public class PlayerSelectionTab : MonoBehaviour {
         riderNumber++;
         if (riderNumber >= manager.riders.Count) riderNumber = 0;
         leftPreview.sharedMesh = manager.GetRider(riderNumber).GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
+		riderName.text = manager.GetRider (riderNumber).GetComponentInChildren<CharacterData> ().name;
     }
 
 
@@ -70,6 +74,7 @@ public class PlayerSelectionTab : MonoBehaviour {
         mountNumber++;
         if (mountNumber >= manager.mounts.Count) mountNumber = 0;
 		rightPreview.sharedMesh = manager.GetMount(mountNumber).GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
+		mountName.text = manager.GetMount (mountNumber).GetComponentInChildren<MountData> ().name;
     }
 
 

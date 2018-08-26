@@ -234,6 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4019749386523472}
   - component: {fileID: 95990738470811684}
+  - component: {fileID: 114361293180084520}
   m_Layer: 0
   m_Name: Rider_2
   m_TagString: Untagged
@@ -1005,6 +1006,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114361293180084520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1550341955417052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0af8be771d51742ab27d7a39d2a3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anthem: 2
+  name: Bob the Borot
 --- !u!135 &135274565445641328
 SphereCollider:
   m_ObjectHideFlags: 1

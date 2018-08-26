@@ -118,7 +118,7 @@ public class GameManager : MonoBehaviour {
 		Vector3 left = GetBezierPointOnLane (0, 0);
 		Vector3 right = GetBezierPointOnLane (0.5f, 0);		
 		announcer.transform.position = (left + right) / 2;
-		announcer.transform.Translate (Vector3.up * 15);
+		announcer.transform.Translate (Vector3.up * 7);
 		
 	}
 
@@ -159,9 +159,10 @@ public class GameManager : MonoBehaviour {
 
 	private IEnumerator FinishRace() {
 		string name = playerGameobjects[ finishedPlayers[0]].GetComponent<MountData>().name;
-
+		string name2 = playerGameobjects[ finishedPlayers[0]].GetComponent<PlsyerController>().rider.GetComponent<CharacterData>().name;
+		
 		winText.gameObject.SetActive (true);
-		winText.text = name + " WINS !!";
+		winText.text = name2.ToUpper() + " ON " + name.ToUpper() + " WINS !!";
 
 		yield return new WaitForSeconds (5f);
 
@@ -182,6 +183,8 @@ public class GameManager : MonoBehaviour {
 
 		audioManager.PlayAnthem (anthem);
 
+		Coroutine follow = StartCoroutine (announcerFollowsWinner ());
+
 		while (audioManager.isAnthemPlaying()) {
 	
 			foreach (GameObject p in playerGameobjects) {
@@ -190,11 +193,23 @@ public class GameManager : MonoBehaviour {
 
 			yield return new WaitForSeconds(0.33f);
 		}
+		StopCoroutine (follow);
 
 		yield return new WaitForSeconds (3f);
 
 		//start new match
 		Init ();
+	}
+
+	private IEnumerator announcerFollowsWinner() {
+
+		while (true) {
+
+			announcer.transform.position = GetBezierPointOnLane(playerGameobjects[ finishedPlayers[0]].GetComponent<PlsyerController>().getPosition(), -players.Count);
+
+			yield return null;
+		}
+
 	}
 	                           
 
@@ -285,6 +300,7 @@ public class GameManager : MonoBehaviour {
 		//	spring.connectedBody = mountPelvis.GetComponent<Rigidbody>();
 		//	spring.spring = 522f;
 
+			controller.rider = riderModel;
 			controller.mountAss = mountPelvis;
 			controller.riderPelvis = riderPelvis;
 			controller.mountAnimator = mountModel.GetComponent<Animator>();

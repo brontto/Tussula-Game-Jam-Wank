@@ -6,6 +6,6 @@ public class CharacterData : MonoBehaviour {
 
 	public int anthem = 0;
 
-
+	public string name = "";
 
 }

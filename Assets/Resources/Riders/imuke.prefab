@@ -50,6 +50,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4368543846326846}
   - component: {fileID: 95485713631839360}
+  - component: {fileID: 114052110974876876}
   m_Layer: 0
   m_Name: imuke
   m_TagString: Untagged
@@ -976,6 +977,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114052110974876876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1104406243275300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0af8be771d51742ab27d7a39d2a3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anthem: 0
+  name: Sucker
 --- !u!135 &135092699258925698
 SphereCollider:
   m_ObjectHideFlags: 1
