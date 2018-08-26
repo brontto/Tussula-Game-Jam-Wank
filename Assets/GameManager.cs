@@ -165,7 +165,11 @@ public class GameManager : MonoBehaviour {
 
 		while (audioManager.isAnthemPlaying()) {
 	
-			yield return null;
+			foreach (GameObject p in playerGameobjects) {
+				p.GetComponent<PlsyerController>().WankPlayer(Random.Range(-1.33f, 1.33f));
+			}
+
+			yield return new WaitForSeconds(0.33f);
 		}
 
 		yield return new WaitForSeconds (3f);
