@@ -266,21 +266,21 @@ MonoBehaviour:
   - playerIndex: 0
     leftKey: 276
     rightKey: 275
-    character: {fileID: 1299274716782422, guid: 2a0012e4f5fa4ac4d99c0dc97305341c,
+    character: {fileID: 1698518582249302, guid: 56318e30345e8094ca83a77f98651c63,
       type: 2}
-    mount: {fileID: 1971909180651872, guid: adf718f7d00b54e4ea236b1bf0bc952b, type: 2}
+    mount: {fileID: 1426406780185096, guid: ef32dee3bb6b40e4191ead59746d22b5, type: 2}
   - playerIndex: 1
     leftKey: 97
     rightKey: 100
-    character: {fileID: 1299274716782422, guid: 2a0012e4f5fa4ac4d99c0dc97305341c,
+    character: {fileID: 1698518582249302, guid: 56318e30345e8094ca83a77f98651c63,
       type: 2}
-    mount: {fileID: 1971909180651872, guid: adf718f7d00b54e4ea236b1bf0bc952b, type: 2}
+    mount: {fileID: 1346287986452146, guid: da06fe43a3082bf468ce5029761c85a6, type: 2}
   - playerIndex: 2
     leftKey: 260
     rightKey: 262
-    character: {fileID: 1299274716782422, guid: 2a0012e4f5fa4ac4d99c0dc97305341c,
+    character: {fileID: 1698518582249302, guid: 56318e30345e8094ca83a77f98651c63,
       type: 2}
-    mount: {fileID: 1971909180651872, guid: adf718f7d00b54e4ea236b1bf0bc952b, type: 2}
+    mount: {fileID: 1666541622589040, guid: 2e49834271dbfd74293fdb9c72237598, type: 2}
   trackLength: 0
   raceStarted: 0
 --- !u!222 &222226119381936764

@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private PlayerCharacterSelection playerCharacterSelection;
 
-
+    float timer = 0;
 
     //deactivate panels, let sequences control them
     void Start()
@@ -54,12 +54,25 @@ public class UIManager : MonoBehaviour
                     playerCharacterSelection.Initialize(playerNumberSelection.GetPlayerCount());
                 }
                 uiSequence = playerCharacterSelection.UpdateMe();
+                timer = 0.0f;
                 break;
             //finalize before starting the game
             case UISEQUENCE.READY:
+                timer += Time.deltaTime;
+                if (timer < 3) break;
                 List<Player> players = playerCharacterSelection.GetPlayers();
-                playerCharacterSelection.gameObject.SetActive(false);
+             //   playerCharacterSelection.gameObject.SetActive(false);
                 Debug.Log("number of players:" + players.Count);
+
+			transform.Find("UICamera").gameObject.SetActive(false);
+
+			//start race with selected players
+		//	GameManager.instance.ResetPlayers();
+
+			GameManager.instance.AddPlayers(players);
+			
+			GameManager.instance.Init();
+
                 uiSequence = UISEQUENCE.END;
                 break;
         }

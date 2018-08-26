@@ -10,28 +10,41 @@ public class PlayerNumberSelection : MonoBehaviour {
 
     RectTransform topTextPos, midTextPos;
     public Text topText, midText;
-
+    private bool update;
 
     void Start() {
         topTextPos = topText.GetComponent<RectTransform>();
         midTextPos = midText.GetComponent<RectTransform>();
+        UpdateElements();
     }
+
+    void OnEnabled() {
+        UpdateElements();
+    }
+
+
+    private void UpdateElements() {
+        if (playerCount <= 0) playerCount = maxPlayerCount;
+        if (playerCount > maxPlayerCount) playerCount = 1;
+        midText.text = "< " + playerCount.ToString() + " >";   
+    }
+
 
     public UISEQUENCE UpdateMe(){
 
-        if(Input.GetKeyDown(KeyCode.RightArrow)) playerCount++;
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) playerCount--;
-
-        if (playerCount <= 0) playerCount = maxPlayerCount;
-        if (playerCount > maxPlayerCount) playerCount = 1;
-
-        if (midText.text != "< " + playerCount.ToString() + " >") {
-            midText.text = "< " + playerCount.ToString() + " >";
+        if(Input.GetKeyDown(KeyCode.RightArrow)) {
+            playerCount++;
+            UpdateElements();
         }
+               
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+            playerCount--;
+            UpdateElements();
+        }
+        
 
         if (Input.GetKeyDown(KeyCode.Return)) {
             return UISEQUENCE.BUTTONSELECT;
-            gameObject.SetActive(false);
         }
         return UISEQUENCE.START;
     }

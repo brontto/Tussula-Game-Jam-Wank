@@ -186,7 +186,7 @@ Material:
     - _SSRefractionProjectionModel: 0
     - _ShiverDirectionality: 0.5
     - _ShiverDrag: 0.2
-    - _Smoothness: 0.471
+    - _Smoothness: 0.414
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
     - _SpecularAAScreenSpaceVariance: 0.1
@@ -217,8 +217,8 @@ Material:
     - _ZTestModeDistortion: 4
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.99396664, g: 1, b: 0.15566039, a: 1}
-    - _Color: {r: 0.99396664, g: 1, b: 0.15566036, a: 1}
+    - _BaseColor: {r: 0.3746264, g: 0.3773585, b: 0.083659664, a: 1}
+    - _Color: {r: 0.37462634, g: 0.37735847, b: 0.08365963, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0.3490566, g: 0.24636771, b: 0.19593272, a: 1}

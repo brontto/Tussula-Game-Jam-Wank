@@ -27,6 +27,10 @@ public class AudioManager : MonoBehaviour {
 		return announcerPlayer.isPlaying ;
 	}
 
+	public bool isAnthemPlaying() {
+		return anthemPlayer.isPlaying ;
+	}
+
 	public void PlayAnthem(int value) {
 
 		if (anthems [value] == null) {
