@@ -126,6 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4548575188859360}
   - component: {fileID: 95201284578520980}
+  - component: {fileID: 114642832901255402}
   m_Layer: 0
   m_Name: Mount_2
   m_TagString: Untagged
@@ -611,6 +612,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114642832901255402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1406317041861776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e7213f5b0b05d42a7a5cef550e3b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: lahna
+  acceleration: 0.25
+  drag: 0.015
+  decelerationFromFailures: 1
 --- !u!137 &137593738348505612
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
