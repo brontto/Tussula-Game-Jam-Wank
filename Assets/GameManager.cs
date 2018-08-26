@@ -7,6 +7,8 @@ using static Cinemachine.CinemachineTargetGroup;
 
 public class GameManager : MonoBehaviour {
 
+	public GameObject winParticles;
+
 	public AudioManager audioManager;
 
 	public Text ranking;
@@ -31,6 +33,8 @@ public class GameManager : MonoBehaviour {
 
 	public static GameManager instance;
 
+	public bool raceStarted = false;
+
 	public void AddPlayer(Player player) {
 		players.Add (player);
 	}
@@ -49,15 +53,39 @@ public class GameManager : MonoBehaviour {
 
 	}
 
-	//void Update() {
+	float speakTime = 0;
+	void Update() {
 
-	//}
+		if (Time.time > speakTime) {
+			speakTime = Time.time + 0.25f;
+
+			if (raceStarted && Random.Range(0,100) < 33 && !audioManager.isAnnouncerTalking()) {
+				audioManager.PlayRandomWank();
+			}
+
+		}
+
+	}
 
 	public void Init() {
 
 		ResetRace ();
 		CreateTrack ();
 		CreatePlayers ();
+
+		StartCoroutine (StartWanking ());
+
+	}
+
+	IEnumerator StartWanking() {
+
+		yield return new WaitForSeconds (1f);
+
+		audioManager.PlayReadySetGo ();
+
+		yield return new WaitForSeconds (3.8f);
+
+		raceStarted = true;
 
 	}
 
@@ -74,14 +102,25 @@ public class GameManager : MonoBehaviour {
 		finishedPlayers.Clear ();
 		playerGameobjects.Clear ();
 		winText.gameObject.SetActive (false);
-
+	
 	}
 
-	public void FinishPlayer(int playerIndex)  {
+	public void FinishPlayer(int playerIndex, Vector3 position)  {
 		finishedPlayers.Add (playerIndex);
 
 		if (finishedPlayers.Count >= players.Count) {
-			StartCoroutine(FinishRace());
+			audioManager.PlayDisappointedWank();
+			raceStarted = false;
+
+
+
+			StartCoroutine (FinishRace ());
+		} else {
+
+			GameObject win = (GameObject) Instantiate(winParticles, position, Quaternion.identity);
+			win.transform.parent = trackGameObject.transform;
+
+			audioManager.PlayFinishWank();
 		}
 	}
 
@@ -91,7 +130,7 @@ public class GameManager : MonoBehaviour {
 		winText.gameObject.SetActive (true);
 		winText.text = name + " WINS !!";
 
-		yield return new WaitForSeconds (2f);
+		yield return new WaitForSeconds (5f);
 
 		//anthermemmadsf
 		int anthem = playerGameobjects [finishedPlayers [0]].GetComponentInChildren<CharacterData> ().anthem;

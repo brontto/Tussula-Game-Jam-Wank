@@ -241,6 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71b20e048cb39ac4fb324265e65c04b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winParticles: {fileID: 1209303793227558, guid: c96c87ab69cc5c345a6f2b972c07d58a,
+    type: 2}
   audioManager: {fileID: 0}
   ranking: {fileID: 114350976171586350}
   winText: {fileID: 114049850678769264}
@@ -276,6 +278,7 @@ MonoBehaviour:
       type: 2}
     mount: {fileID: 1971909180651872, guid: adf718f7d00b54e4ea236b1bf0bc952b, type: 2}
   trackLength: 0
+  raceStarted: 0
 --- !u!222 &222226119381936764
 CanvasRenderer:
   m_ObjectHideFlags: 1

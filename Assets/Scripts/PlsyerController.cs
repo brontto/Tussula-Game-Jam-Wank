@@ -44,9 +44,14 @@ public class PlsyerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		HandleControls ();
-
 		FollowBezier ();
+
+		if (!gman.raceStarted) {
+			return;
+		}
+
+		HandleControls ();
+			
 	}
 
 	void FollowBezier() {
@@ -69,7 +74,7 @@ public class PlsyerController : MonoBehaviour {
 	}
 
 	private void playerFinished() {
-		gman.FinishPlayer (playerInfo.getIndex ());
+		gman.FinishPlayer (playerInfo.getIndex (), transform.position);
 		isFinished = true;
 
 	}
