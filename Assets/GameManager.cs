@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour {
 
 	public GameObject winParticles;
 
+	public GameObject[] fireWorks;
+
 	public AudioManager audioManager;
 
 	public Text ranking;
@@ -132,6 +134,18 @@ public class GameManager : MonoBehaviour {
 
 		yield return new WaitForSeconds (5f);
 
+		//particles
+
+		int amount = 10;
+
+		while (amount > 0) {
+
+			GameObject g = (GameObject) Instantiate(fireWorks[Random.Range(0, fireWorks.Length)], GetBezierPointOnLane(Random.Range(0f,1f)),Quaternion.identity);
+			g.transform.parent = trackGameObject.transform;
+			amount--;
+
+		}
+
 		//anthermemmadsf
 		int anthem = playerGameobjects [finishedPlayers [0]].GetComponentInChildren<CharacterData> ().anthem;
 
@@ -150,7 +164,12 @@ public class GameManager : MonoBehaviour {
 		trackGameObject = (GameObject)Instantiate (tracks [n].trackPrefab, Vector3.zero, Quaternion.identity);
 		trackBezierOuter = (GameObject)Instantiate (tracks [n].trackOuterBezierPrefab, Vector3.zero, Quaternion.identity);
 		trackBezierInner = (GameObject)Instantiate (tracks [n].trackInnerBezierPrefab, Vector3.zero, Quaternion.identity);
-		
+
+		trackBezierOuter.transform.parent = trackGameObject.transform;
+		trackBezierInner.transform.parent = trackGameObject.transform;
+
+		trackGameObject.AddComponent<rotator> ();
+
 		bezierOuter = trackBezierOuter.GetComponent<BezierCurve> ();
 		bezierInner = trackBezierInner.GetComponent<BezierCurve> ();		
 
