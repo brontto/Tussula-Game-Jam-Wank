@@ -689,7 +689,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1698518582249302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.810072, y: 3.3307757, z: -2.237136}
+  m_LocalPosition: {x: -33.948166, y: 10.732735, z: 37.632805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4014754732886410}
@@ -1018,8 +1018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0af8be771d51742ab27d7a39d2a3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anthem: 1
-  name: Toad Dude
+  anthem: 0
 --- !u!135 &135118015255475288
 SphereCollider:
   m_ObjectHideFlags: 1
