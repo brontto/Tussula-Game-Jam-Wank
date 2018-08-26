@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 //Handles players' key binding selections and also which rider and mount are chosen.
 //When timer goes to zero, go to next UISEQUENCE. Escape key goes back to previous sequence
+
+//Refactor Timer to its own class
 public class PlayerCharacterSelection : MonoBehaviour {
     private List<Player> players;
     private int playerCount = 0;
@@ -18,12 +20,12 @@ public class PlayerCharacterSelection : MonoBehaviour {
     [SerializeField]
     private float countdown4start = 30;
 
-    private float timer;
-   
+    [SerializeField]
+    private TimerPanel timer;
+
     private Coroutine co;
     private ResourceManager resourceManager;
-    [SerializeField]
-    private Text timerText;
+  
 
     //Find resource manager from the scene
     private void FindResourceManager() {
@@ -45,7 +47,7 @@ public class PlayerCharacterSelection : MonoBehaviour {
 
     //Use this to initialize the tabs
     public void Initialize(int _playerCount) {
-        timer = countdown4start;
+        timer.Init(countdown4start);
         playerCount = _playerCount;
         buttonSelectActive = false;
         players = new List<Player>();
@@ -69,15 +71,14 @@ public class PlayerCharacterSelection : MonoBehaviour {
 
     //Decrement timer and control the sequence flow
     public UISEQUENCE UpdateMe(){
-        if(Input.GetKeyDown(KeyCode.Escape)) {
-            Debug.Log("ESCAPE");
+        timer.UpdateMe();
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
             KillMe();
             return UISEQUENCE.START;
         }
 
-        timer -= Time.deltaTime;
-        timerText.text = "Start in: " +((int)(timer)).ToString();
-        if (timer <= 0.0f) {
+        if (timer.OutOfTime()) {
             StopCoroutine(co);
             return UISEQUENCE.READY;
         }
@@ -112,7 +113,7 @@ public class PlayerCharacterSelection : MonoBehaviour {
                         playerSelectController.SetLeftButton(i, item);
                         players[i].setLeftKey(item);
                         keysInUse.Add(item);
-                        playerSelectController.SetTextRight(i, "S. Right Button");
+                        playerSelectController.SetTextRight(i, "Select");
                     } else if (players[i].getRightKey() == KeyCode.None) {
                         playerSelectController.SetRightButton(i, item);
                         players[i].setRightKey(item);

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 224704237149626370}
   - component: {fileID: 222148216593919322}
   - component: {fileID: 114999249575420642}
+  - component: {fileID: 114001206904004876}
   m_Layer: 12
   m_Name: TimerPanel
   m_TagString: Untagged
@@ -472,6 +473,19 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1406304596829688}
   m_Enabled: 1
+--- !u!114 &114001206904004876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007445051521116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 868fef562f838b244ba9e1fd9354421f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerTextField: {fileID: 114958276917905600}
+  timerText: 'Wank in: '
 --- !u!114 &114035503083073812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -560,10 +574,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 28
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -594,7 +608,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -788,7 +802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -798,7 +812,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -879,6 +893,8 @@ MonoBehaviour:
   leftKeyText: {fileID: 114290226006558876}
   rightPreview: {fileID: 33188841020657058}
   leftPreview: {fileID: 33940943458763496}
+  playerNameField: Wanker
+  waitText: Wait...
 --- !u!114 &114704461195301836
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -892,7 +908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSelectController: {fileID: 114191291685129556}
   countdown4start: 30
-  timerText: {fileID: 114958276917905600}
+  timer: {fileID: 114001206904004876}
 --- !u!114 &114818928692544696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -992,10 +1008,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 30
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1248,8 +1264,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.8}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -0.0000009536743}
+  m_AnchoredPosition: {x: 0, y: -2}
+  m_SizeDelta: {x: 0, y: -2.000001}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224033936952916636
 RectTransform:
@@ -1419,8 +1435,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 80}
-  m_SizeDelta: {x: 100, y: 50}
+  m_AnchoredPosition: {x: 0, y: 20}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224714720443786690
 RectTransform:
