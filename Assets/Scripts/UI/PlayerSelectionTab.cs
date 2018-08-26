@@ -8,8 +8,8 @@ public class Pair {
         rider = _rider;
         mount = _mount;
     }
-    public int rider;
-    public int mount;
+    public int rider = 0;
+    public int mount = 0;
 }
 
 public class PlayerSelectionTab : MonoBehaviour {
@@ -22,6 +22,9 @@ public class PlayerSelectionTab : MonoBehaviour {
 
     [SerializeField] private MeshFilter rightPreview;
     [SerializeField] private MeshFilter leftPreview;
+
+    [SerializeField] private string playerNameField = "P";
+    [SerializeField] private string waitText = "Wait...";
 
     private ResourceManager manager;
     int riderNumber = 0;
@@ -37,9 +40,10 @@ public class PlayerSelectionTab : MonoBehaviour {
 
     public void Initialize(int number, ResourceManager manager) {
         this.number = number;
-        nameField.text = "P"+number.ToString();
-        leftKeyText.text = "Wait...";
-        rightKeyText.text = "Wait...";
+        //arrays start from 0 :)
+        nameField.text = playerNameField + number.ToString();
+        leftKeyText.text = waitText;
+        rightKeyText.text = waitText;
         this.manager = manager;
     }
 

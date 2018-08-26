@@ -13,7 +13,12 @@ public class PlsyerController : MonoBehaviour {
 			playerInfo = value;
 			leftKey = playerInfo.getLeftKey();
 			rightKey = playerInfo.getRightKey();	
-			mountInfo = playerInfo.GetMount().GetComponent<MountData>();
+			mountInfo = new MountData();
+
+			//purkkaaa
+			mountInfo.drag = 0.015f;
+			mountInfo.acceleration = 0.1f;
+			mountInfo.decelerationFromFailures = 0.2f;
 		}
 	}
 
@@ -34,6 +39,10 @@ public class PlsyerController : MonoBehaviour {
 
 	private bool isFinished = false;
 
+	public GameObject rider;
+	public GameObject riderPelvis;
+	public GameObject mountAss;
+
 	// Use this for initialization
 	void Start () {
 		gman = GameManager.instance;
@@ -44,9 +53,14 @@ public class PlsyerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		HandleControls ();
-
 		FollowBezier ();
+
+		if (!gman.raceStarted) {
+			return;
+		}
+
+		HandleControls ();
+			
 	}
 
 	void FollowBezier() {
@@ -57,6 +71,8 @@ public class PlsyerController : MonoBehaviour {
 		position += velocity / (gman.trackLength * 40);
 
 		t.position = gman.GetBezierPointOnLane (position, (float)playerInfo.getIndex());
+
+		riderPelvis.transform.position = mountAss.transform.position;
 
 		//look to future location to rotate mounts properly
 		t.LookAt(gman.GetBezierPointOnLane (position + 0.01f, (float)playerInfo.getIndex()));
@@ -69,7 +85,7 @@ public class PlsyerController : MonoBehaviour {
 	}
 
 	private void playerFinished() {
-		gman.FinishPlayer (playerInfo.getIndex ());
+		gman.FinishPlayer (playerInfo.getIndex (), transform.position);
 		isFinished = true;
 
 	}
@@ -116,7 +132,13 @@ public class PlsyerController : MonoBehaviour {
 				
 			} else {
 
-				velocity += mountInfo.acceleration;
+				Rigidbody[] rigids = riderPelvis.GetComponentsInChildren<Rigidbody>();
+				foreach(Rigidbody r in rigids) {
+					r.AddForce (r.transform.right * currentDirection * r.mass * 100);
+					velocity += mountInfo.acceleration;
+				}
+
+		
 
 			}
 			

@@ -1,53 +1,81 @@
 fileFormatVersion: 2
-guid: c4ceec1ebcfa8e748846a84b28ae701f
+guid: a7d3606e1d86460419a84d835d99938d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Armature
-    100002: ass
-    100004: fin
-    100006: fin_end
-    100008: hand1
-    100010: hand1_end
-    100012: hand2
-    100014: hand2_end
-    100016: jaw
-    100018: jaw_end
-    100020: //RootNode
-    100022: mount_2
-    100024: spine1
-    100026: spine2
-    100028: spine3
-    100030: spine3_end
-    100032: tail1
-    100034: tail1_end
-    100036: tail2
-    100038: tail2_end
-    400000: Armature
-    400002: ass
-    400004: fin
-    400006: fin_end
-    400008: hand1
-    400010: hand1_end
-    400012: hand2
-    400014: hand2_end
-    400016: jaw
-    400018: jaw_end
-    400020: //RootNode
-    400022: mount_2
-    400024: spine1
-    400026: spine2
-    400028: spine3
-    400030: spine3_end
-    400032: tail1
-    400034: tail1_end
-    400036: tail2
-    400038: tail2_end
-    2100000: Mount_2
-    2100002: Mount_2eye
-    4300000: mount_2
+    100000: arm1_1_L
+    100002: arm1_1_R.001
+    100004: arm1_2_L
+    100006: arm1_2_L_end
+    100008: arm1_2_R.001
+    100010: arm1_2_R.001_end
+    100012: arm2_1_L
+    100014: arm2_1_R.001
+    100016: arm2_2_L
+    100018: arm2_2_L_end
+    100020: arm2_2_R.001
+    100022: arm2_2_R.001_end
+    100024: arm3_1_L
+    100026: arm3_1_L.001
+    100028: arm3_1_L.001_end
+    100030: arm3_1_R.002
+    100032: arm3_1_R.003
+    100034: arm3_1_R.003_end
+    100036: arm4_1_L
+    100038: arm4_1_R.001
+    100040: arm4_2_L
+    100042: arm4_2_L_end
+    100044: arm4_2_R.001
+    100046: arm4_2_R.001_end
+    100048: Armature
+    100050: ass
+    100052: eye1_L
+    100054: eye1_R.001
+    100056: eye2_L
+    100058: eye2_L_end
+    100060: eye2_R.001
+    100062: eye2_R.001_end
+    100064: Mount4
+    100066: //RootNode
+    400000: arm1_1_L
+    400002: arm1_1_R.001
+    400004: arm1_2_L
+    400006: arm1_2_L_end
+    400008: arm1_2_R.001
+    400010: arm1_2_R.001_end
+    400012: arm2_1_L
+    400014: arm2_1_R.001
+    400016: arm2_2_L
+    400018: arm2_2_L_end
+    400020: arm2_2_R.001
+    400022: arm2_2_R.001_end
+    400024: arm3_1_L
+    400026: arm3_1_L.001
+    400028: arm3_1_L.001_end
+    400030: arm3_1_R.002
+    400032: arm3_1_R.003
+    400034: arm3_1_R.003_end
+    400036: arm4_1_L
+    400038: arm4_1_R.001
+    400040: arm4_2_L
+    400042: arm4_2_L_end
+    400044: arm4_2_R.001
+    400046: arm4_2_R.001_end
+    400048: Armature
+    400050: ass
+    400052: eye1_L
+    400054: eye1_R.001
+    400056: eye2_L
+    400058: eye2_L_end
+    400060: eye2_R.001
+    400062: eye2_R.001_end
+    400064: Mount4
+    400066: //RootNode
+    2100000: mount4
+    2100002: mount4Eye
+    4300000: Mount4
     9500000: //RootNode
-    13700000: mount_2
+    13700000: Mount4
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -98,7 +126,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
     previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:

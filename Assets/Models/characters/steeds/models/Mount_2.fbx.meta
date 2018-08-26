@@ -1,60 +1,53 @@
 fileFormatVersion: 2
-guid: 5f46779c0e6f5bf4381c5fa54eb05f8c
+guid: c4ceec1ebcfa8e748846a84b28ae701f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Armature
     100002: ass
-    100004: leg1_1
-    100006: leg1_2
-    100008: leg1_3
-    100010: leg1_3_end
-    100012: leg2_1
-    100014: leg2_2
-    100016: leg2_3
-    100018: leg2_3_end
-    100020: leg3_1
-    100022: leg3_2
-    100024: leg3_3
-    100026: leg3_3_end
-    100028: leg4_1
-    100030: leg4_2
-    100032: leg4_3
-    100034: leg4_3_end
-    100036: //RootNode
-    100038: pampula
-    100040: spine
-    100042: spine2
-    100044: spine2_end
+    100004: fin
+    100006: fin_end
+    100008: hand1
+    100010: hand1_end
+    100012: hand2
+    100014: hand2_end
+    100016: jaw
+    100018: jaw_end
+    100020: //RootNode
+    100022: mount_2
+    100024: spine1
+    100026: spine2
+    100028: spine3
+    100030: spine3_end
+    100032: tail1
+    100034: tail1_end
+    100036: tail2
+    100038: tail2_end
     400000: Armature
     400002: ass
-    400004: leg1_1
-    400006: leg1_2
-    400008: leg1_3
-    400010: leg1_3_end
-    400012: leg2_1
-    400014: leg2_2
-    400016: leg2_3
-    400018: leg2_3_end
-    400020: leg3_1
-    400022: leg3_2
-    400024: leg3_3
-    400026: leg3_3_end
-    400028: leg4_1
-    400030: leg4_2
-    400032: leg4_3
-    400034: leg4_3_end
-    400036: pampula
-    400038: //RootNode
-    400040: spine
-    400042: spine2
-    400044: spine2_end
-    2100000: PampulaLegs
-    2100002: PampulaBottom
-    2100004: PampulaTop
-    4300000: pampula
+    400004: fin
+    400006: fin_end
+    400008: hand1
+    400010: hand1_end
+    400012: hand2
+    400014: hand2_end
+    400016: jaw
+    400018: jaw_end
+    400020: //RootNode
+    400022: mount_2
+    400024: spine1
+    400026: spine2
+    400028: spine3
+    400030: spine3_end
+    400032: tail1
+    400034: tail1_end
+    400036: tail2
+    400038: tail2_end
+    2100000: Mount_2
+    2100002: Mount_2eye
+    4300000: mount_2
     9500000: //RootNode
-    13700000: pampula
+    13700000: mount_2
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -105,7 +98,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
     previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:

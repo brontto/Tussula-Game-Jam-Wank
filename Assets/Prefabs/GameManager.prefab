@@ -241,6 +241,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71b20e048cb39ac4fb324265e65c04b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winParticles: {fileID: 1209303793227558, guid: c96c87ab69cc5c345a6f2b972c07d58a,
+    type: 2}
+  fireWorks:
+  - {fileID: 1853579573402384, guid: 7c121bf9166a16248bd45785823e7bd6, type: 2}
+  - {fileID: 1574226227017226, guid: 31dc5c0b3cb77af4fa795b788c37ec53, type: 2}
+  - {fileID: 1329847474461616, guid: 63c5b0ae1774c4f4baa9fe53139a35ea, type: 2}
+  audioManager: {fileID: 0}
   ranking: {fileID: 114350976171586350}
   winText: {fileID: 114049850678769264}
   tracks:
@@ -250,26 +257,32 @@ MonoBehaviour:
       type: 2}
     trackInnerBezierPrefab: {fileID: 1165547192929676, guid: 3a60df7f7f7b20d41a310e63d6a39d82,
       type: 2}
+  - trackPrefab: {fileID: 100000, guid: 24739090e38fdcf46b5b8d8b8ae4323e, type: 3}
+    trackOuterBezierPrefab: {fileID: 1531708586312138, guid: da0973f7cc461fd4698e835a74cb8803,
+      type: 2}
+    trackInnerBezierPrefab: {fileID: 1645648178302712, guid: 3944d350d7ae8c941be03c0668fe5ebf,
+      type: 2}
   players:
   - playerIndex: 0
     leftKey: 276
     rightKey: 275
-    character: {fileID: 1299274716782422, guid: 2a0012e4f5fa4ac4d99c0dc97305341c,
+    character: {fileID: 1698518582249302, guid: 56318e30345e8094ca83a77f98651c63,
       type: 2}
-    mount: {fileID: 1971909180651872, guid: adf718f7d00b54e4ea236b1bf0bc952b, type: 2}
+    mount: {fileID: 1426406780185096, guid: ef32dee3bb6b40e4191ead59746d22b5, type: 2}
   - playerIndex: 1
     leftKey: 97
     rightKey: 100
-    character: {fileID: 1299274716782422, guid: 2a0012e4f5fa4ac4d99c0dc97305341c,
+    character: {fileID: 1698518582249302, guid: 56318e30345e8094ca83a77f98651c63,
       type: 2}
-    mount: {fileID: 1971909180651872, guid: adf718f7d00b54e4ea236b1bf0bc952b, type: 2}
+    mount: {fileID: 1346287986452146, guid: da06fe43a3082bf468ce5029761c85a6, type: 2}
   - playerIndex: 2
     leftKey: 260
     rightKey: 262
-    character: {fileID: 1299274716782422, guid: 2a0012e4f5fa4ac4d99c0dc97305341c,
+    character: {fileID: 1698518582249302, guid: 56318e30345e8094ca83a77f98651c63,
       type: 2}
-    mount: {fileID: 1971909180651872, guid: adf718f7d00b54e4ea236b1bf0bc952b, type: 2}
+    mount: {fileID: 1666541622589040, guid: 2e49834271dbfd74293fdb9c72237598, type: 2}
   trackLength: 0
+  raceStarted: 0
 --- !u!222 &222226119381936764
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -1,71 +1,65 @@
 fileFormatVersion: 2
-guid: 8da432b54ec9cd948b03c2d71b2de63a
+guid: 7598d3a929800654ea9d0c3cddfafe29
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Armature
     100002: ass
     100004: ass_end
-    100006: eye
-    100008: eye_end
+    100006: head
+    100008: head_end
     100010: leg1_1
-    100012: leg1_1.001
-    100014: leg1_2
-    100016: leg1_2.001
-    100018: leg1_3
-    100020: leg1_3.001
-    100022: leg1_4
-    100024: leg1_4.001
-    100026: leg1_4.001_end
-    100028: leg1_4_end
-    100030: mount1
-    100032: //RootNode
-    100034: mouth1
-    100036: mouth1_end
-    100038: mouth2
-    100040: mouth2_end
-    100042: neck0
-    100044: neck1
-    100046: neck2
-    100048: neck3
-    100050: tail1
-    100052: tail2
-    100054: tail2_end
+    100012: leg1_2
+    100014: leg1_2_end
+    100016: leg2_1
+    100018: leg2_2
+    100020: leg2_2_end
+    100022: leg3_1
+    100024: leg3_2
+    100026: leg3_2_end
+    100028: leg4_1
+    100030: leg4_2
+    100032: leg4_2_end
+    100034: Mount6
+    100036: //RootNode
+    100038: neck1
+    100040: neck2
+    100042: spine1
+    100044: spine2
+    100046: spine3
+    100048: spine4
+    100050: spine4_end
     400000: Armature
     400002: ass
     400004: ass_end
-    400006: eye
-    400008: eye_end
+    400006: head
+    400008: head_end
     400010: leg1_1
-    400012: leg1_1.001
-    400014: leg1_2
-    400016: leg1_2.001
-    400018: leg1_3
-    400020: leg1_3.001
-    400022: leg1_4
-    400024: leg1_4.001
-    400026: leg1_4.001_end
-    400028: leg1_4_end
-    400030: mount1
-    400032: //RootNode
-    400034: mouth1
-    400036: mouth1_end
-    400038: mouth2
-    400040: mouth2_end
-    400042: neck0
-    400044: neck1
-    400046: neck2
-    400048: neck3
-    400050: tail1
-    400052: tail2
-    400054: tail2_end
-    2100000: mount1
-    2100002: mount1Eye
-    2100004: mount1EyeCenter
-    2100006: mount1Mouth
-    4300000: mount1
+    400012: leg1_2
+    400014: leg1_2_end
+    400016: leg2_1
+    400018: leg2_2
+    400020: leg2_2_end
+    400022: leg3_1
+    400024: leg3_2
+    400026: leg3_2_end
+    400028: leg4_1
+    400030: leg4_2
+    400032: leg4_2_end
+    400034: Mount6
+    400036: //RootNode
+    400038: neck1
+    400040: neck2
+    400042: spine1
+    400044: spine2
+    400046: spine3
+    400048: spine4
+    400050: spine4_end
+    2100000: Mount6
+    2100002: Mount6Pink
+    4300000: Mount6
     9500000: //RootNode
-    13700000: mount1
+    13700000: Mount6
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -116,7 +110,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
     previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:

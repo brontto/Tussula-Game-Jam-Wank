@@ -1,59 +1,60 @@
 fileFormatVersion: 2
-guid: c323904623ca02b44b96c38f4e96f7fb
+guid: 5f46779c0e6f5bf4381c5fa54eb05f8c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Armature
     100002: ass
-    100004: ass_end
-    100006: bottom
-    100008: bottom_end
-    100010: //RootNode
-    100012: centipede
-    100014: head
-    100016: head_end
-    100018: legs1
-    100020: legs1_end
-    100022: legs2
-    100024: legs2_end
-    100026: spine1
-    100028: spine2
-    100030: spine3
-    100032: spine4
-    100034: tentacle1_1
-    100036: tentacle1_1.001
-    100038: tentacle1_2
-    100040: tentacle1_2.001
-    100042: tentacle1_2.001_end
-    100044: tentacle1_2_end
+    100004: leg1_1
+    100006: leg1_2
+    100008: leg1_3
+    100010: leg1_3_end
+    100012: leg2_1
+    100014: leg2_2
+    100016: leg2_3
+    100018: leg2_3_end
+    100020: leg3_1
+    100022: leg3_2
+    100024: leg3_3
+    100026: leg3_3_end
+    100028: leg4_1
+    100030: leg4_2
+    100032: leg4_3
+    100034: leg4_3_end
+    100036: //RootNode
+    100038: pampula
+    100040: spine
+    100042: spine2
+    100044: spine2_end
     400000: Armature
     400002: ass
-    400004: ass_end
-    400006: bottom
-    400008: bottom_end
-    400010: //RootNode
-    400012: centipede
-    400014: head
-    400016: head_end
-    400018: legs1
-    400020: legs1_end
-    400022: legs2
-    400024: legs2_end
-    400026: spine1
-    400028: spine2
-    400030: spine3
-    400032: spine4
-    400034: tentacle1_1
-    400036: tentacle1_1.001
-    400038: tentacle1_2
-    400040: tentacle1_2.001
-    400042: tentacle1_2.001_end
-    400044: tentacle1_2_end
-    2100000: Centipede
-    2100002: CentipedeEyes
-    4300000: centipede
+    400004: leg1_1
+    400006: leg1_2
+    400008: leg1_3
+    400010: leg1_3_end
+    400012: leg2_1
+    400014: leg2_2
+    400016: leg2_3
+    400018: leg2_3_end
+    400020: leg3_1
+    400022: leg3_2
+    400024: leg3_3
+    400026: leg3_3_end
+    400028: leg4_1
+    400030: leg4_2
+    400032: leg4_3
+    400034: leg4_3_end
+    400036: pampula
+    400038: //RootNode
+    400040: spine
+    400042: spine2
+    400044: spine2_end
+    2100000: PampulaLegs
+    2100002: PampulaBottom
+    2100004: PampulaTop
+    4300000: pampula
     9500000: //RootNode
-    13700000: centipede
+    13700000: pampula
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -104,7 +105,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
     previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
