@@ -891,7 +891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSelectController: {fileID: 114191291685129556}
-  countdown4start: 5
+  countdown4start: 30
   timerText: {fileID: 114958276917905600}
 --- !u!114 &114818928692544696
 MonoBehaviour:
@@ -970,7 +970,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: < 16 >
+  m_Text: < 15 >
 --- !u!114 &114958276917905600
 MonoBehaviour:
   m_ObjectHideFlags: 1
