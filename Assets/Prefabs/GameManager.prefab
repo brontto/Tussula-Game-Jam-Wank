@@ -243,6 +243,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winParticles: {fileID: 1209303793227558, guid: c96c87ab69cc5c345a6f2b972c07d58a,
     type: 2}
+  fireWorks:
+  - {fileID: 1853579573402384, guid: 7c121bf9166a16248bd45785823e7bd6, type: 2}
+  - {fileID: 1574226227017226, guid: 31dc5c0b3cb77af4fa795b788c37ec53, type: 2}
+  - {fileID: 1329847474461616, guid: 63c5b0ae1774c4f4baa9fe53139a35ea, type: 2}
   audioManager: {fileID: 0}
   ranking: {fileID: 114350976171586350}
   winText: {fileID: 114049850678769264}
