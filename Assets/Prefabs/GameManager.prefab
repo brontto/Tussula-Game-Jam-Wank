@@ -275,13 +275,13 @@ MonoBehaviour:
     rightKey: 100
     character: {fileID: 1698518582249302, guid: 56318e30345e8094ca83a77f98651c63,
       type: 2}
-    mount: {fileID: 1346287986452146, guid: da06fe43a3082bf468ce5029761c85a6, type: 2}
+    mount: {fileID: 1406317041861776, guid: e80022606a41b00449a77245ef181078, type: 2}
   - playerIndex: 2
     leftKey: 260
     rightKey: 262
     character: {fileID: 1698518582249302, guid: 56318e30345e8094ca83a77f98651c63,
       type: 2}
-    mount: {fileID: 1666541622589040, guid: 2e49834271dbfd74293fdb9c72237598, type: 2}
+    mount: {fileID: 1788160801336042, guid: 13bb4472885483f4587d0e942d959eb2, type: 2}
   trackLength: 0
   raceStarted: 0
 --- !u!222 &222226119381936764
