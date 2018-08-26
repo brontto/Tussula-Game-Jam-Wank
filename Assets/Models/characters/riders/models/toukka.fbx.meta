@@ -5,67 +5,67 @@ ModelImporter:
   fileIDToRecycleName:
     100000: arm_L
     100002: arm_R
-    100004: boner
-    100006: elbow_L
-    100008: elbow_R
-    100010: foot_L
-    100012: foot_L_end
-    100014: foot_R
-    100016: foot_R_end
-    100018: hand_L
-    100020: hand_L_end
-    100022: hand_R
-    100024: hand_R_end
-    100026: head
-    100028: head_end
-    100030: hips_L
-    100032: hips_R
-    100034: knee_L
-    100036: knee_R
-    100038: pelvis
-    100040: spine2
-    100042: spineMiddle
-    100044: tail1
-    100046: tail2
-    100048: tail4
-    100050: tail4_end
-    100052: //RootNode
-    100054: Armature
+    100004: Armature
+    100006: boner
+    100008: elbow_L
+    100010: elbow_R
+    100012: foot_L
+    100014: foot_L_end
+    100016: foot_R
+    100018: foot_R_end
+    100020: hand_L
+    100022: hand_L_end
+    100024: hand_R
+    100026: hand_R_end
+    100028: head
+    100030: head_end
+    100032: hips_L
+    100034: hips_R
+    100036: knee_L
+    100038: knee_R
+    100040: pelvis
+    100042: spine2
+    100044: spineMiddle
+    100046: tail1
+    100048: tail2
+    100050: tail4
+    100052: tail4_end
+    100054: //RootNode
     100056: toukka
     400000: arm_L
     400002: arm_R
-    400004: boner
-    400006: elbow_L
-    400008: elbow_R
-    400010: foot_L
-    400012: foot_L_end
-    400014: foot_R
-    400016: foot_R_end
-    400018: hand_L
-    400020: hand_L_end
-    400022: hand_R
-    400024: hand_R_end
-    400026: head
-    400028: head_end
-    400030: hips_L
-    400032: hips_R
-    400034: knee_L
-    400036: knee_R
-    400038: pelvis
-    400040: spine2
-    400042: spineMiddle
-    400044: tail1
-    400046: tail2
-    400048: tail4
-    400050: tail4_end
-    400052: //RootNode
-    400054: Armature
-    400056: toukka
+    400004: Armature
+    400006: boner
+    400008: elbow_L
+    400010: elbow_R
+    400012: foot_L
+    400014: foot_L_end
+    400016: foot_R
+    400018: foot_R_end
+    400020: hand_L
+    400022: hand_L_end
+    400024: hand_R
+    400026: hand_R_end
+    400028: head
+    400030: head_end
+    400032: hips_L
+    400034: hips_R
+    400036: knee_L
+    400038: knee_R
+    400040: pelvis
+    400042: spine2
+    400044: spineMiddle
+    400046: tail1
+    400048: tail2
+    400050: tail4
+    400052: tail4_end
+    400054: toukka
+    400056: //RootNode
     2100000: toukka
     2100002: toukkaEyes
-    2300000: toukka
-    3300000: toukka
     4300000: toukka
+    9500000: //RootNode
+    13700000: toukka
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -116,9 +116,9 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -143,7 +143,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

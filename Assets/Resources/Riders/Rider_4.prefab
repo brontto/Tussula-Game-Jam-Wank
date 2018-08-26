@@ -68,6 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4559763504352732}
   - component: {fileID: 95644251573556702}
+  - component: {fileID: 114021703184641956}
   m_Layer: 0
   m_Name: Rider_4
   m_TagString: Untagged
@@ -977,6 +978,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114021703184641956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1090365708072942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0af8be771d51742ab27d7a39d2a3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anthem: 10
+  name: Salminen
 --- !u!135 &135912277198536620
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -35,6 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4373098526365608}
   - component: {fileID: 95374796877185816}
+  - component: {fileID: 114579029063252000}
   m_Layer: 0
   m_Name: Rider_3
   m_TagString: Untagged
@@ -1006,6 +1007,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114579029063252000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1192302138737620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0af8be771d51742ab27d7a39d2a3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anthem: 4
+  name: RoborttXPod
 --- !u!135 &135679831582755060
 SphereCollider:
   m_ObjectHideFlags: 1

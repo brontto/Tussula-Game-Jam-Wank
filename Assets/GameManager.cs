@@ -96,6 +96,8 @@ public class GameManager : MonoBehaviour {
 		announcer.transform.position = GetBezierPointOnLane (0, -players.Count /2);
 		announcer.transform.Translate (Vector3.up * 2);
 
+		announcerAnimator.SetBool ("start", true);
+
 		CreatePlayers ();
 
 		StartCoroutine (StartWanking ());
@@ -184,6 +186,7 @@ public class GameManager : MonoBehaviour {
 		audioManager.PlayAnthem (anthem);
 
 		Coroutine follow = StartCoroutine (announcerFollowsWinner ());
+		announcerAnimator.SetBool ("victory", true);
 
 		while (audioManager.isAnthemPlaying()) {
 	
@@ -194,6 +197,8 @@ public class GameManager : MonoBehaviour {
 			yield return new WaitForSeconds(0.33f);
 		}
 		StopCoroutine (follow);
+
+		announcerAnimator.SetBool ("victory", false);
 
 		yield return new WaitForSeconds (3f);
 
