@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71b20e048cb39ac4fb324265e65c04b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
   ranking: {fileID: 114350976171586350}
   winText: {fileID: 114049850678769264}
   tracks:
@@ -249,6 +250,11 @@ MonoBehaviour:
     trackOuterBezierPrefab: {fileID: 1256471329421086, guid: 784a77b880d77954daa12bac13479bd7,
       type: 2}
     trackInnerBezierPrefab: {fileID: 1165547192929676, guid: 3a60df7f7f7b20d41a310e63d6a39d82,
+      type: 2}
+  - trackPrefab: {fileID: 100000, guid: 24739090e38fdcf46b5b8d8b8ae4323e, type: 3}
+    trackOuterBezierPrefab: {fileID: 1531708586312138, guid: da0973f7cc461fd4698e835a74cb8803,
+      type: 2}
+    trackInnerBezierPrefab: {fileID: 1645648178302712, guid: 3944d350d7ae8c941be03c0668fe5ebf,
       type: 2}
   players:
   - playerIndex: 0

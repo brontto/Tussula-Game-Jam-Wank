@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour {
 	private BezierCurve bezierOuter;
 	private BezierCurve bezierInner;
 
-	private GameObject track;
+	private GameObject trackGameObject;
 	private GameObject trackBezierOuter;
 	private GameObject trackBezierInner;
 
@@ -62,6 +62,15 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void ResetRace() {
+
+		foreach (GameObject g in playerGameobjects) {
+			Destroy(g);
+		}
+
+		Destroy (trackGameObject);
+		Destroy (trackBezierOuter);
+		Destroy (trackBezierInner);
+
 		finishedPlayers.Clear ();
 		playerGameobjects.Clear ();
 		winText.gameObject.SetActive (false);
@@ -99,7 +108,7 @@ public class GameManager : MonoBehaviour {
 
 		int n = Random.Range (0, tracks.Length);
 
-		track = (GameObject)Instantiate (tracks [n].trackPrefab, Vector3.zero, Quaternion.identity);
+		trackGameObject = (GameObject)Instantiate (tracks [n].trackPrefab, Vector3.zero, Quaternion.identity);
 		trackBezierOuter = (GameObject)Instantiate (tracks [n].trackOuterBezierPrefab, Vector3.zero, Quaternion.identity);
 		trackBezierInner = (GameObject)Instantiate (tracks [n].trackInnerBezierPrefab, Vector3.zero, Quaternion.identity);
 		
@@ -107,7 +116,7 @@ public class GameManager : MonoBehaviour {
 		bezierInner = trackBezierInner.GetComponent<BezierCurve> ();		
 
 		trackLength = bezierOuter.length;
-		
+
 	}
 
 	public Vector3 GetBezierPointOnLane(float value, float playerIndex = 0) {
