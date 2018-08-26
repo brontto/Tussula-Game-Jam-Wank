@@ -186,7 +186,7 @@ public class GameManager : MonoBehaviour {
 		trackBezierOuter.transform.parent = trackGameObject.transform;
 		trackBezierInner.transform.parent = trackGameObject.transform;
 
-		trackGameObject.AddComponent<rotator> ();
+	//	trackGameObject.AddComponent<rotator> ();
 
 		bezierOuter = trackBezierOuter.GetComponent<BezierCurve> ();
 		bezierInner = trackBezierInner.GetComponent<BezierCurve> ();		
@@ -260,6 +260,7 @@ public class GameManager : MonoBehaviour {
 
 			controller.mountAss = mountPelvis;
 			controller.riderPelvis = riderPelvis;
+			controller.mountAnimator = mountModel.GetComponent<Animator>();
 
 			//dont put this to parent until recursive searches are done
 			riderModel.transform.parent = mountModel.transform;
