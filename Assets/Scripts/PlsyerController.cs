@@ -17,8 +17,8 @@ public class PlsyerController : MonoBehaviour {
 
 			//purkkaaa
 			mountInfo.drag = 0.015f;
-			mountInfo.acceleration = 0.1f;
-			mountInfo.decelerationFromFailures = 0.2f;
+			mountInfo.acceleration = 0.8f;
+			mountInfo.decelerationFromFailures = 1f;
 		}
 	}
 
@@ -111,8 +111,18 @@ public class PlsyerController : MonoBehaviour {
 		return position;
 	}
 
+	public void  WankPlayer(float direction) {
 
+		Rigidbody[] rigids = riderPelvis.GetComponentsInChildren<Rigidbody>();
+		foreach(Rigidbody r in rigids) {
+			r.AddForce (r.transform.right * direction * r.mass * 600);
+		
+		}
 
+		velocity += mountInfo.acceleration* 0.66f;
+		
+	}
+	
 	void HandleControls() {
 
 		if (isFinished) {
@@ -141,14 +151,8 @@ public class PlsyerController : MonoBehaviour {
 				
 			} else {
 
-				Rigidbody[] rigids = riderPelvis.GetComponentsInChildren<Rigidbody>();
-				foreach(Rigidbody r in rigids) {
-					r.AddForce (r.transform.right * currentDirection * r.mass * 600);
-					velocity += mountInfo.acceleration;
-				}
-
-		
-
+				WankPlayer(currentDirection);	
+				velocity += mountInfo.acceleration;
 			}
 			
 		}
