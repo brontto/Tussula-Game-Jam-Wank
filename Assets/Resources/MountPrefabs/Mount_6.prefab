@@ -275,6 +275,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4066940141751192}
   - component: {fileID: 95559078419676842}
+  - component: {fileID: 114202326065326924}
   m_Layer: 0
   m_Name: Mount_6
   m_TagString: Untagged
@@ -784,6 +785,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114202326065326924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1726924571800126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e7213f5b0b05d42a7a5cef550e3b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Shroom Man
+  acceleration: 0.25
+  drag: 0.015
+  decelerationFromFailures: 1
 --- !u!137 &137489030997090986
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -709,7 +709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e7213f5b0b05d42a7a5cef550e3b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Mushroom
+  name: Float Thingy
   acceleration: 0.25
   drag: 0.015
   decelerationFromFailures: 1
