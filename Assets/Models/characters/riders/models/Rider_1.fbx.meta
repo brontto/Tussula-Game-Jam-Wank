@@ -1,107 +1,68 @@
 fileFormatVersion: 2
-guid: 813e8ee7f8af2b04b8a3940e9df89e5a
+guid: 24d51040c145159449a962a7cc8c9b27
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: arm3_1
-    100002: arm3_2
-    100004: arm3_3
-    100006: arm3_3_end
-    100008: arm_1_1
-    100010: arm_1_2
-    100012: arm_1_3
-    100014: arm_1_3_end
-    100016: arm_2_1
-    100018: arm_2_2
-    100020: arm_2_3
-    100022: arm_2_3_end
-    100024: armature
-    100026: ass
-    100028: emperor
-    100030: engine
-    100032: eye_big
-    100034: eye_small
-    100036: leg1_1
-    100038: leg1_2
-    100040: leg1_2_end
-    100042: leg_2_1
-    100044: leg_2_2
-    100046: leg_2_2_end
-    100048: neck
-    100050: neck_end
-    100052: pipe
-    100054: pipe.001
-    100056: //RootNode
-    100058: spine1
-    100060: spine2
-    100062: stomach
-    100064: stomach_end
-    100066: teeth_lower
-    100068: teeth_upper
-    100070: wreath
-    400000: arm3_1
-    400002: arm3_2
-    400004: arm3_3
-    400006: arm3_3_end
-    400008: arm_1_1
-    400010: arm_1_2
-    400012: arm_1_3
-    400014: arm_1_3_end
-    400016: arm_2_1
-    400018: arm_2_2
-    400020: arm_2_3
-    400022: arm_2_3_end
-    400024: armature
-    400026: ass
-    400028: emperor
-    400030: engine
-    400032: eye_big
-    400034: eye_small
-    400036: leg1_1
-    400038: leg1_2
-    400040: leg1_2_end
-    400042: leg_2_1
-    400044: leg_2_2
-    400046: leg_2_2_end
-    400048: neck
-    400050: neck_end
-    400052: pipe
-    400054: pipe.001
-    400056: //RootNode
-    400058: spine1
-    400060: spine2
-    400062: stomach
-    400064: stomach_end
-    400066: teeth_lower
-    400068: teeth_upper
-    400070: wreath
-    2100000: emperor
-    2100002: eye
-    2100004: theeth
-    2100006: silver
-    2100008: gold
-    2300000: engine
-    2300002: pipe
-    2300004: pipe.001
-    2300006: wreath
-    3300000: engine
-    3300002: pipe
-    3300004: pipe.001
-    3300006: wreath
-    4300000: emperor
-    4300002: eye_big
-    4300004: eye_small
-    4300006: teeth_lower
-    4300008: teeth_upper
-    4300010: pipe.001
-    4300012: engine
-    4300014: wreath
+    100000: arm_L
+    100002: arm_R.001
+    100004: Armature
+    100006: boner
+    100008: elbow_L
+    100010: elbow_R.001
+    100012: foot_L
+    100014: foot_L_end
+    100016: foot_R.001
+    100018: foot_R.001_end
+    100020: hand_L
+    100022: hand_L_end
+    100024: hand_R.001
+    100026: hand_R.001_end
+    100028: head
+    100030: head_end
+    100032: hips_L
+    100034: hips_R.001
+    100036: knee_L
+    100038: knee_R.001
+    100040: pelvis
+    100042: rider1
+    100044: rider1eye
+    100046: //RootNode
+    100048: spine2
+    100050: spineMiddle
+    400000: arm_L
+    400002: arm_R.001
+    400004: Armature
+    400006: boner
+    400008: elbow_L
+    400010: elbow_R.001
+    400012: foot_L
+    400014: foot_L_end
+    400016: foot_R.001
+    400018: foot_R.001_end
+    400020: hand_L
+    400022: hand_L_end
+    400024: hand_R.001
+    400026: hand_R.001_end
+    400028: head
+    400030: head_end
+    400032: hips_L
+    400034: hips_R.001
+    400036: knee_L
+    400038: knee_R.001
+    400040: pelvis
+    400042: rider1
+    400044: rider1eye
+    400046: //RootNode
+    400048: spine2
+    400050: spineMiddle
+    2100000: rider1
+    2100002: rider1Top
+    2100004: rider1Eye
+    4300000: rider1
+    4300002: rider1eye
     9500000: //RootNode
-    13700000: emperor
-    13700002: eye_big
-    13700004: eye_small
-    13700006: teeth_lower
-    13700008: teeth_upper
+    13700000: rider1
+    13700002: rider1eye
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -152,7 +113,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
     previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:

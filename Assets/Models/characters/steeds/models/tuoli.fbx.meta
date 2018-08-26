@@ -1,63 +1,73 @@
 fileFormatVersion: 2
-guid: 5f46779c0e6f5bf4381c5fa54eb05f8c
+guid: 6f7abf79ce852d14e8fae3077082c15c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Armature
     100002: ass
-    100004: leg1_1
-    100006: leg1_2
-    100008: leg1_3
-    100010: leg1_3_end
-    100012: leg2_1
-    100014: leg2_2
-    100016: leg2_3
-    100018: leg2_3_end
-    100020: leg3_1
-    100022: leg3_2
-    100024: leg3_3
-    100026: leg3_3_end
-    100028: leg4_1
-    100030: leg4_2
-    100032: leg4_3
-    100034: leg4_3_end
-    100036: //RootNode
-    100038: pampula
-    100040: spine
-    100042: spine2
-    100044: spine2_end
+    100004: head
+    100006: head_end
+    100008: leg1_L
+    100010: leg1_R.001
+    100012: leg2_L
+    100014: leg2_R.001
+    100016: leg3_0
+    100018: leg3_1
+    100020: leg3_2
+    100022: leg3_3
+    100024: leg3_4
+    100026: leg3_4_end
+    100028: leg3_L
+    100030: leg3_R.001
+    100032: leg4_L
+    100034: leg4_R.001
+    100036: leg5_L
+    100038: leg5_L_end
+    100040: leg5_R.001
+    100042: leg5_R.001_end
+    100044: spine1
+    100046: spine2
+    100048: //RootNode
+    100050: tuoli
+    100052: tuoliTheeth
     400000: Armature
     400002: ass
-    400004: leg1_1
-    400006: leg1_2
-    400008: leg1_3
-    400010: leg1_3_end
-    400012: leg2_1
-    400014: leg2_2
-    400016: leg2_3
-    400018: leg2_3_end
-    400020: leg3_1
-    400022: leg3_2
-    400024: leg3_3
-    400026: leg3_3_end
-    400028: leg4_1
-    400030: leg4_2
-    400032: leg4_3
-    400034: leg4_3_end
-    400036: pampula
-    400038: //RootNode
-    400040: spine
-    400042: spine2
-    400044: spine2_end
-    2100000: PampulaLegs
-    2100002: PampulaBottom
-    2100004: PampulaTop
-    4300000: pampula
+    400004: head
+    400006: head_end
+    400008: leg1_L
+    400010: leg1_R.001
+    400012: leg2_L
+    400014: leg2_R.001
+    400016: leg3_0
+    400018: leg3_1
+    400020: leg3_2
+    400022: leg3_3
+    400024: leg3_4
+    400026: leg3_4_end
+    400028: leg3_L
+    400030: leg3_R.001
+    400032: leg4_L
+    400034: leg4_R.001
+    400036: leg5_L
+    400038: leg5_L_end
+    400040: leg5_R.001
+    400042: leg5_R.001_end
+    400044: spine1
+    400046: spine2
+    400048: //RootNode
+    400050: tuoli
+    400052: tuoliTheeth
+    2100000: tuoli
+    2100002: tuoliEye
+    2100004: tuoliTeeth
+    4300000: tuoli
+    4300002: tuoliTheeth
     9500000: //RootNode
-    13700000: pampula
+    13700000: tuoli
+    13700002: tuoliTheeth
   externalObjects: {}
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -105,8 +115,8 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
-    previousCalculatedGlobalScale: 1
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
