@@ -6,9 +6,9 @@ public class MountData: MonoBehaviour {
 
 	public string name = "palikka";
 
-	public float acceleration = 1f;
-	public float drag = 0.1f;
+ 	public float acceleration = 0.25f;
+	public float drag = 0.015f;
 
-	public float decelerationFromFailures = 2f;
+	public float decelerationFromFailures = 1f;
 
 }

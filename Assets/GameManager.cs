@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
-using static Cinemachine.CinemachineTargetGroup;
+//using static Cinemachine.CinemachineTargetGroup;
 
 public class GameManager : MonoBehaviour {
 
@@ -168,7 +168,7 @@ public class GameManager : MonoBehaviour {
 		trackBezierOuter.transform.parent = trackGameObject.transform;
 		trackBezierInner.transform.parent = trackGameObject.transform;
 
-		trackGameObject.AddComponent<rotator> ();
+	//	trackGameObject.AddComponent<rotator> ();
 
 		bezierOuter = trackBezierOuter.GetComponent<BezierCurve> ();
 		bezierInner = trackBezierInner.GetComponent<BezierCurve> ();		
@@ -195,24 +195,55 @@ public class GameManager : MonoBehaviour {
 		return innerPoint + distance;
 	}
 
+	public Transform SearchHierarchyForBone(Transform current, string name)   
+	{
+		// check if the current bone is the bone we're looking for, if so return it
+		if (current.name == name)
+			return current;
+		// search through child bones for the bone we're looking for
+		for (int i = 0; i < current.childCount; ++i)
+		{
+			// the recursive step; repeat the search one step deeper in the hierarchy
+			Transform found = SearchHierarchyForBone(current.GetChild(i), name);
+			// a transform was returned by the search above that is not null,
+			// it must be the bone we're looking for
+			if (found != null)
+				return found;
+		}
+		
+		// bone with name was not found
+		return null;
+	}
+	
 	void CreatePlayers() {
-
+		
 		GameObject cine = GameObject.Find ("TargetGroup1");
 
 		foreach (Player player in players) {
 
+			//mount
 			GameObject mountModel = (GameObject)Instantiate(player.GetMount(), Vector3.zero, Quaternion.identity);
 
 			PlsyerController controller = mountModel.AddComponent<PlsyerController>();
 			controller.PlayerInfo = player;
 
+			//rider
 			GameObject riderModel = (GameObject)Instantiate(player.GetRider(), Vector3.zero, Quaternion.identity);
+
+			//find riderpelvis
+			GameObject riderPelvis = SearchHierarchyForBone(riderModel.transform, "pelvis").gameObject;
+		//	SpringJoint spring = riderPelvis.AddComponent<SpringJoint>();
+
+			//find mountpelvis
+			GameObject mountPelvis = SearchHierarchyForBone(mountModel.transform, "ass").gameObject;
+		//	spring.connectedBody = mountPelvis.GetComponent<Rigidbody>();
+		//	spring.spring = 522f;
+
+			controller.mountAss = mountPelvis;
+			controller.riderPelvis = riderPelvis;
+
+			//dont put this to parent until recursive searches are done
 			riderModel.transform.parent = mountModel.transform;
-
-			SpringJoint spring = riderModel.AddComponent<SpringJoint>();
-			spring.connectedBody = mountModel.GetComponent<Rigidbody>();
-
-			spring.spring = 1222f;
 
 			playerGameobjects.Add(mountModel);
 
