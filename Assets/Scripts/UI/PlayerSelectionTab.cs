@@ -8,8 +8,8 @@ public class Pair {
         rider = _rider;
         mount = _mount;
     }
-    public int rider;
-    public int mount;
+    public int rider = 0;
+    public int mount = 0;
 }
 
 public class PlayerSelectionTab : MonoBehaviour {

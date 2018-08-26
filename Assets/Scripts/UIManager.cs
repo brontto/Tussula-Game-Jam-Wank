@@ -58,6 +58,7 @@ public class UIManager : MonoBehaviour
             case UISEQUENCE.READY:
                 List<Player> players = playerCharacterSelection.GetPlayers();
                 playerCharacterSelection.gameObject.SetActive(false);
+                Debug.Log("number of players:" + players.Count);
                 uiSequence = UISEQUENCE.END;
                 break;
         }

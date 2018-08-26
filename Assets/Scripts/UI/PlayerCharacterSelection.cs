@@ -36,6 +36,10 @@ public class PlayerCharacterSelection : MonoBehaviour {
         FindResourceManager();
     }
 
+    void OnDisable() {
+        KillMe();
+    }
+
     public void Initialize(int _playerCount) {
         timer = countdown4start;
         playerCount = _playerCount;
@@ -46,6 +50,7 @@ public class PlayerCharacterSelection : MonoBehaviour {
         FindResourceManager();
         playerSelectController.CreateNPlayers(playerCount, resourceManager);
         //Debug.Log(resourceManager);
+        players.Clear();
         co = StartCoroutine(setButtons());
     }
 
@@ -66,9 +71,7 @@ public class PlayerCharacterSelection : MonoBehaviour {
         timer -= Time.deltaTime;
         timerText.text = "Start in: " +((int)(timer)).ToString();
         if (timer <= 0.0f) {
-            
             StopCoroutine(co);
-            gameObject.SetActive(false);
             return UISEQUENCE.READY;
         }
 
@@ -83,8 +86,8 @@ public class PlayerCharacterSelection : MonoBehaviour {
             Pair indx = playerSelectController.tabs[i].GetSelected();
             players[i].SetMount(resourceManager.mounts[indx.mount]);
             players[i].SetRider(resourceManager.riders[indx.rider]);
-        } 
-
+        }
+        
         return players;
     }
 
