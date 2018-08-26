@@ -34,14 +34,14 @@ MonoBehaviour:
     scatterDistance1: {r: 0.3, g: 0.3, b: 0.3, a: 0}
     scatterDistance2: {r: 0.5, g: 0.5, b: 0.5, a: 0}
     lerpWeight: 1
-  - name: Profile 3
-    scatteringDistance: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    transmissionTint: {r: 1, g: 1, b: 1, a: 1}
+  - name: Steeds
+    scatteringDistance: {r: 1.3254902, g: 0.6431373, b: 0.6431373, a: 1}
+    transmissionTint: {r: 5.8377957, g: 2.4507725, b: 2.4507725, a: 1}
     texturingMode: 0
     transmissionMode: 0
-    thicknessRemap: {x: 0, y: 5}
+    thicknessRemap: {x: 6.97269, y: 18.945395}
     worldScale: 1
-    ior: 1.4
+    ior: 1.471
     scatterDistance1: {r: 0.3, g: 0.3, b: 0.3, a: 0}
     scatterDistance2: {r: 0.5, g: 0.5, b: 0.5, a: 0}
     lerpWeight: 1

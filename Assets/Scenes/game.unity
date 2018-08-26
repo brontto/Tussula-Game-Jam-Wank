@@ -113,54 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &228677793
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4089719390289612, guid: bfa57763bf88e4445b4e8bb68e439cce, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -4.5715284
-      objectReference: {fileID: 0}
-    - target: {fileID: 4089719390289612, guid: bfa57763bf88e4445b4e8bb68e439cce, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3.0595486
-      objectReference: {fileID: 0}
-    - target: {fileID: 4089719390289612, guid: bfa57763bf88e4445b4e8bb68e439cce, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4089719390289612, guid: bfa57763bf88e4445b4e8bb68e439cce, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4089719390289612, guid: bfa57763bf88e4445b4e8bb68e439cce, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4089719390289612, guid: bfa57763bf88e4445b4e8bb68e439cce, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4089719390289612, guid: bfa57763bf88e4445b4e8bb68e439cce, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4089719390289612, guid: bfa57763bf88e4445b4e8bb68e439cce, type: 2}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bfa57763bf88e4445b4e8bb68e439cce, type: 2}
-  m_IsPrefabAsset: 0
---- !u!114 &228677794 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114643285997991924, guid: bfa57763bf88e4445b4e8bb68e439cce,
-    type: 2}
-  m_PrefabInternal: {fileID: 228677793}
-  m_Script: {fileID: 11500000, guid: 5270f7bc0f929e04ca49d569cb07ae16, type: 3}
 --- !u!1001 &325351315
 Prefab:
   m_ObjectHideFlags: 0
@@ -396,11 +348,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114684853878724322, guid: 47929da59c9babc459d9c499168e4b39,
-        type: 2}
-      propertyPath: audioManager
-      value: 
-      objectReference: {fileID: 228677794}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47929da59c9babc459d9c499168e4b39, type: 2}
   m_IsPrefabAsset: 0
@@ -550,7 +497,7 @@ MonoBehaviour:
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
-    Dutch: 0
+    Dutch: -0
     LensShift: {x: 0, y: 0}
   m_Transitions:
     m_BlendHint: 0
@@ -568,7 +515,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534019758}
-  m_LocalRotation: {x: -0.060757734, y: -0.8633113, z: 0.48940295, w: -0.107177176}
+  m_LocalRotation: {x: -0.06075776, y: -0.8633113, z: 0.48940295, w: -0.10717722}
   m_LocalPosition: {x: -3.4, y: 23.23, z: 13.482437}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -758,7 +705,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 3
+  field of view: 58
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -782,7 +729,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 789708232}
-  m_LocalRotation: {x: -0.060757734, y: -0.8633113, z: 0.48940295, w: -0.107177176}
+  m_LocalRotation: {x: -0.06075776, y: -0.8633113, z: 0.48940295, w: -0.10717722}
   m_LocalPosition: {x: -3.4, y: 23.23, z: 13.482437}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1067,22 +1014,22 @@ MonoBehaviour:
   m_VerticalDamping: 0.5
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0
+  m_DeadZoneWidth: 0.15
+  m_DeadZoneHeight: 0.15
   m_SoftZoneWidth: 0.8
   m_SoftZoneHeight: 0.8
   m_BiasX: 0
   m_BiasY: 0
-  m_GroupFramingSize: 0.8
+  m_GroupFramingSize: 0.5
   m_FramingMode: 2
   m_FrameDamping: 2
-  m_AdjustmentMode: 2
+  m_AdjustmentMode: 0
   m_MaxDollyIn: 5000
   m_MaxDollyOut: 5000
   m_MinimumDistance: 1
   m_MaximumDistance: 5000
-  m_MinimumFOV: 3
-  m_MaximumFOV: 60
+  m_MinimumFOV: 13
+  m_MaximumFOV: 58
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 100
 --- !u!114 &1327420304
