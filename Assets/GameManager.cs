@@ -45,13 +45,17 @@ public class GameManager : MonoBehaviour {
 		players.Clear ();
 	}
 
+	public void AddPlayers(List<Player> p) {
+		players = p;
+	}
+
 	void Awake() {
 		instance = this;
 	}
 
 	// Use this for initialization
 	void Start () {
-		Init ();
+	//	Init ();
 
 	}
 
@@ -151,7 +155,13 @@ public class GameManager : MonoBehaviour {
 
 		audioManager.PlayAnthem (anthem);
 
-		yield return new WaitForSeconds (15f);
+		while (audioManager.isAnthemPlaying()) {
+	
+			yield return null;
+		}
+
+		yield return new WaitForSeconds (3f);
+
 		//start new match
 		Init ();
 	}
@@ -168,7 +178,7 @@ public class GameManager : MonoBehaviour {
 		trackBezierOuter.transform.parent = trackGameObject.transform;
 		trackBezierInner.transform.parent = trackGameObject.transform;
 
-	//	trackGameObject.AddComponent<rotator> ();
+		trackGameObject.AddComponent<rotator> ();
 
 		bezierOuter = trackBezierOuter.GetComponent<BezierCurve> ();
 		bezierInner = trackBezierInner.GetComponent<BezierCurve> ();		

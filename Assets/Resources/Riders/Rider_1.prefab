@@ -312,6 +312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4691427098699646}
   - component: {fileID: 95267792739083870}
+  - component: {fileID: 114690116039732824}
   m_Layer: 0
   m_Name: Rider_1
   m_TagString: Untagged
@@ -1006,6 +1007,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114690116039732824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1698518582249302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0af8be771d51742ab27d7a39d2a3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anthem: 0
 --- !u!135 &135118015255475288
 SphereCollider:
   m_ObjectHideFlags: 1

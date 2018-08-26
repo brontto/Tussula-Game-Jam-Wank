@@ -20,8 +20,8 @@ public class PlayerSelectionTab : MonoBehaviour {
     [SerializeField] private Text leftKeyText;
 
 
-    [SerializeField] private MeshFilter rightPreview;
-    [SerializeField] private MeshFilter leftPreview;
+    [SerializeField] private SkinnedMeshRenderer rightPreview;
+	[SerializeField] private SkinnedMeshRenderer leftPreview;
 
     [SerializeField] private string playerNameField = "P";
     [SerializeField] private string waitText = "Wait...";
@@ -62,14 +62,14 @@ public class PlayerSelectionTab : MonoBehaviour {
     private void SetNextRider() {
         riderNumber++;
         if (riderNumber >= manager.riders.Count) riderNumber = 0;
-        leftPreview.sharedMesh = manager.GetRider(riderNumber).GetComponent<MeshFilter>().sharedMesh;
+        leftPreview.sharedMesh = manager.GetRider(riderNumber).GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
     }
 
 
     private void SetNextMount() {
         mountNumber++;
         if (mountNumber >= manager.mounts.Count) mountNumber = 0;
-        rightPreview.sharedMesh = manager.GetMount(mountNumber).GetComponent<MeshFilter>().sharedMesh;
+		rightPreview.sharedMesh = manager.GetMount(mountNumber).GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
     }
 
 

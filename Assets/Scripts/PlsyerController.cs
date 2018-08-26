@@ -134,7 +134,7 @@ public class PlsyerController : MonoBehaviour {
 
 				Rigidbody[] rigids = riderPelvis.GetComponentsInChildren<Rigidbody>();
 				foreach(Rigidbody r in rigids) {
-					r.AddForce (r.transform.right * currentDirection * r.mass * 100);
+					r.AddForce (r.transform.right * currentDirection * r.mass * 600);
 					velocity += mountInfo.acceleration;
 				}
 
