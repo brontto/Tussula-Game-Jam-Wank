@@ -486,6 +486,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerTextField: {fileID: 114958276917905600}
   timerText: 'Wank in: '
+  endText: Break a leg
+  timerFontSpeed: 3.1415927
+  timerSizeAmplitude: 5
 --- !u!114 &114035503083073812
 MonoBehaviour:
   m_ObjectHideFlags: 1

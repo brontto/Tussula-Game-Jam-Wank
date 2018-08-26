@@ -128,7 +128,7 @@ public class PlayerCharacterSelection : MonoBehaviour {
 
                 yield return null;
             }
-            Debug.Log(players[i].getKeyDetails());
+            //Debug.Log(players[i].getKeyDetails());
         }
     }
 
