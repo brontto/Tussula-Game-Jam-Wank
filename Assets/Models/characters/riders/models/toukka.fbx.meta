@@ -30,6 +30,8 @@ ModelImporter:
     100048: tail4
     100050: tail4_end
     100052: //RootNode
+    100054: Armature
+    100056: toukka
     400000: arm_L
     400002: arm_R
     400004: boner
@@ -57,6 +59,13 @@ ModelImporter:
     400048: tail4
     400050: tail4_end
     400052: //RootNode
+    400054: Armature
+    400056: toukka
+    2100000: toukka
+    2100002: toukkaEyes
+    2300000: toukka
+    3300000: toukka
+    4300000: toukka
   externalObjects: {}
   materials:
     importMaterials: 1
