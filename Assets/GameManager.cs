@@ -186,7 +186,7 @@ public class GameManager : MonoBehaviour {
 		trackBezierOuter.transform.parent = trackGameObject.transform;
 		trackBezierInner.transform.parent = trackGameObject.transform;
 
-		trackGameObject.AddComponent<rotator> ();
+	//	trackGameObject.AddComponent<rotator> ();
 
 		bezierOuter = trackBezierOuter.GetComponent<BezierCurve> ();
 		bezierInner = trackBezierInner.GetComponent<BezierCurve> ();		

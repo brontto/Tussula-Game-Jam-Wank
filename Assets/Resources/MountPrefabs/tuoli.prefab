@@ -826,7 +826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e7213f5b0b05d42a7a5cef550e3b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: palikka
+  name: Tuoli
   acceleration: 0.1
   drag: 0.025
   decelerationFromFailures: 2
